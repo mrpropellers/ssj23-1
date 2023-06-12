@@ -4,7 +4,7 @@
 https://unity3d.com/get-unity/download
 ### Install Unity
 * Open Unity Hub
-* Go the [Unity Download Archive](https://unity3d.com/get-unity/download/archive) and install version *2021.3.24f1* via the Unity Hub link
+* Go the [Unity Download Archive](https://unity3d.com/get-unity/download/archive) and install version *2022.3.1f1* via the Unity Hub link
 ## Download this Project
 You can download and install the project either via Github Desktop or by using the git CLI (command-line interface) -- most folks should opt to use Github Desktop unless you're already comfortable with - or want to learn how to use - the CLI
 ### Using Github Desktop
@@ -13,11 +13,11 @@ You can download and install the project either via Github Desktop or by using t
 ### Using git CLI
 * You may need to manually initialize git LFS. Once cloned use `git lfs install` and `git lfs pull` to pull any binary files
 ## Open the Project in Unity
-From the Unity Hub | Projects tab, click "Open," navigate to where Git checked out the project, and select the LudumDare53 directory
+From the Unity Hub | Projects tab, click "Open," navigate to where Git checked out the project, and select the SSJ23-Idle directory
 
 #
 # Project Best Practices
-### DO Namespace your code with `namespace LeftOut.LudumDare`
+### DO Namespace your code with `namespace LeftOut.GameJam`
 This will help us find each other's code in our IDE's and will make refactoring later easier.
 ### DO Work in your own branch
 Name your branch with a prefix unique to you, and a small phrase describing what you're working on, e.g. `devin/pickup-system` -- if you're just working a bunch of things it's fine to use something like `myname/staging` or `myname/dev`
@@ -34,4 +34,4 @@ If it says `using UnityEditor` at the top, it should be in an Editor folder. If 
 ### DO Check for permissively licensed Open Source or free Asset Store projects before starting a new system
 Always double-check that you aren't about to write a bunch of code that already exists in a useable format. But, be wary of free Script assets... most of the time they're more of a pain to integrate than they're worth.
 ## DO Always ask for help when you need it
-The point of the Game Jam is to Learn New Things! Check the Resources channel for previously shared resources or ask for help/feedback in the help-and-feedback channel!
+The point of the Game Jam is to Learn New Things! Check the Resources channel for previously shared resources or ask for help/feedback in the support channel!
