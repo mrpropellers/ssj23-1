@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d748fad8b7891884ebe893802a2811c9, type: 3}
   m_Name: ComicallyFast
   m_EditorClassIdentifier: 
+  SomeField: 0
   <NumShortBreaks>k__BackingField: 1
-  <LengthFocusTime>k__BackingField: 0.1
-  <LengthShortBreak>k__BackingField: 0.1
-  <LengthLongBreak>k__BackingField: 0.1
+  <DurationFocusMinutes>k__BackingField: 0.15
+  <DurationShortBreakMinutes>k__BackingField: 0.05
+  <DurationLongBreakMinutes>k__BackingField: 0.1
