@@ -1,0 +1,16 @@
+{
+    "name": "LeftOut.GameJam.Clock",
+    "rootNamespace": "LeftOut.GameJam.Clock",
+    "references": [
+        "GUID:517d68e952e134045810d1ed7411423b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,14 @@
+{
+    "name": "LeftOut.GameJam.Runtime",
+    "rootNamespace": "LeftOut.GameJam",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
