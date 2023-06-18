@@ -2,18 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using UnityEngine;
-using UnityEngine.Splines;
 
-namespace LeftOut.GameJam.Bonsai
+namespace UnityEngine.Splines
 {
     /// <summary>
     /// A component for creating a tube mesh from a Spline at runtime.
     /// </summary>
     [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
-    public class SplineTree : MonoBehaviour
+    [AddComponentMenu("Splines/Spline Extrude")]
+    [ExecuteAlways]
+    public class BonsaiSpline : MonoBehaviour
     {
-        [SerializeField]
+        [SerializeField, Tooltip("The Spline to extrude.")]
         SplineContainer m_Container;
 
         [SerializeField, Tooltip("Enable to regenerate the extruded mesh when the target Spline is modified. Disable " +
@@ -47,6 +47,16 @@ namespace LeftOut.GameJam.Bonsai
         Mesh m_Mesh;
         bool m_RebuildRequested;
         float m_NextScheduledRebuild;
+
+        /// <summary>The SplineContainer of the <see cref="Spline"/> to extrude.</summary>
+        [Obsolete("Use Container instead.", false)]
+        public SplineContainer container => Container;
+        /// <summary>The SplineContainer of the <see cref="Spline"/> to extrude.</summary>
+        public SplineContainer Container
+        {
+            get => m_Container;
+            set => m_Container = value;
+        }
 
         /// <summary>
         /// Enable to regenerate the extruded mesh when the target Spline is modified. Disable this option if the Spline
@@ -155,15 +165,15 @@ namespace LeftOut.GameJam.Bonsai
             TryGetComponent(out m_Container);
 
             if (TryGetComponent<MeshFilter>(out var filter))
-                filter.sharedMesh = m_Mesh; // = CreateMeshAsset();
+                filter.sharedMesh = m_Mesh = CreateMeshAsset();
 
-            if (TryGetComponent<MeshRenderer>(out var meshRenderer) && meshRenderer.sharedMaterial == null)
+            if (TryGetComponent<MeshRenderer>(out var renderer) && renderer.sharedMaterial == null)
             {
                 // todo Make Material.GetDefaultMaterial() public
                 var cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 var mat = cube.GetComponent<MeshRenderer>().sharedMaterial;
                 DestroyImmediate(cube);
-                meshRenderer.sharedMaterial = mat;
+                renderer.sharedMaterial = mat;
             }
 
             Rebuild();
@@ -211,11 +221,8 @@ namespace LeftOut.GameJam.Bonsai
         /// </summary>
         public void Rebuild()
         {
-            if ((m_Mesh = GetComponent<MeshFilter>().sharedMesh) == null)
-            {
-                Debug.LogWarning("No sharedMesh assigned; can't rebuild.");
+            if((m_Mesh = GetComponent<MeshFilter>().sharedMesh) == null)
                 return;
-            }
             
             SplineMesh.Extrude(Splines, m_Mesh, m_Radius, m_Sides, m_SegmentsPerUnit, m_Capped, m_Range);
             m_NextScheduledRebuild = Time.time + 1f / m_RebuildFrequency;
@@ -246,6 +253,30 @@ namespace LeftOut.GameJam.Bonsai
         {
             Rebuild();
         }
-    }
 
+        internal Mesh CreateMeshAsset()
+        {
+            var mesh = new Mesh();
+            mesh.name = name;
+
+#if UNITY_EDITOR
+            var scene = SceneManagement.SceneManager.GetActiveScene();
+            var sceneDataDir = "Assets";
+
+            if (!string.IsNullOrEmpty(scene.path))
+            {
+                var dir = Path.GetDirectoryName(scene.path);
+                sceneDataDir = $"{dir}/{Path.GetFileNameWithoutExtension(scene.path)}";
+                if (!Directory.Exists(sceneDataDir))
+                    Directory.CreateDirectory(sceneDataDir);
+            }
+
+            var path = UnityEditor.AssetDatabase.GenerateUniqueAssetPath($"{sceneDataDir}/SplineExtrude_{mesh.name}.asset");
+            UnityEditor.AssetDatabase.CreateAsset(mesh, path);
+            mesh = UnityEditor.AssetDatabase.LoadAssetAtPath<Mesh>(path);
+            UnityEditor.EditorGUIUtility.PingObject(mesh);
+#endif
+            return mesh;
+        }
+    }
 }

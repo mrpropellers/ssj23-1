@@ -38,7 +38,7 @@
     "com.unity.timeline": "1.7.4",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.8.0",
-    "leftout.toolkit": "https://github.com/mrpropellers/LeftOutToolkit.git?path=LeftOutUnityTools#ssj23-1",
+    "leftout.toolkit": "file:../../../LeftOutToolkit/LeftOutUnityTools",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
