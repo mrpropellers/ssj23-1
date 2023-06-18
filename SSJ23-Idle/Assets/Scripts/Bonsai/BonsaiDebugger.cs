@@ -13,8 +13,22 @@ namespace LeftOut.GameJam.Bonsai
 #if UNITY_EDITOR
         // 0x6E624EB7u
         public uint RandSeed = 0x6E624EB7u;
+        public float GrowthTime = 10f;
         
         BonsaiGrower m_Grower;
+
+        BonsaiGrower GrowerNoNull
+        {
+            get
+            {
+                if (m_Grower == null)
+                {
+                    m_Grower = GetComponent<BonsaiGrower>();
+                }
+
+                return m_Grower;
+            }
+        }
 
         void Awake()
         {
@@ -28,7 +42,25 @@ namespace LeftOut.GameJam.Bonsai
                 Debug.LogError("Can't grow Bonsai when not in Play mode!");
                 return;
             }
-            m_Grower.GrowGeneration();
+            m_Grower.GrowGeneration(0, GrowthTime);
+        }
+
+        internal void ShowTrunks()
+        {
+            foreach (var trunk in GrowerNoNull.Trunks)
+            {
+                trunk.Reset();
+                Debug.Log($"Force-growing {trunk}");
+                trunk.GrowByProgress(0, 1f);
+            }
+        }
+
+        internal void HideTrunks()
+        {
+            foreach (var trunk in GrowerNoNull.Trunks)
+            {
+                trunk.Reset();
+            }
         }
 
         internal void VerifyNormalSampling()
