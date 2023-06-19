@@ -1,10 +1,27 @@
-﻿using System;
+﻿using Codice.Client.Common;
+using System;
 using UnityEngine;
 
 namespace LeftOut.GameJam.Clock
 {
     public class DayNightManager : MonoBehaviour
     {
+        public Vector3 noon;
+
+        [Header("Sun")]
+        public Light sun;
+        public Gradient sunColor;
+        public AnimationCurve sunIntensity;
+
+        [Header("Moon")]
+        public Light moon;
+        public Gradient moonColor;
+        public AnimationCurve moonIntensity;
+
+        [Header("Other Lighting")]
+        public AnimationCurve lightingIntensityMultiplier;
+        public AnimationCurve reflectionsIntensityMultiplier;
+
         void Update()
         {
             // This is a 0-1 value that indicates progress through the session
@@ -26,12 +43,36 @@ namespace LeftOut.GameJam.Clock
 
         void UpdateDay(float progress)
         {
-            // TODO Blaine 
+            sun.gameObject.SetActive(true);
+            moon.gameObject.SetActive(false);
+
+            //light intensity
+            sun.intensity = sunIntensity.Evaluate(progress);
+
+            //change colors
+            sun.color = sunColor.Evaluate(progress);
+
+            sun.transform.eulerAngles = ((progress - 0.14f) / 1.5f) * noon * 4.0f;
+
+            RenderSettings.ambientIntensity = lightingIntensityMultiplier.Evaluate(progress);
+            RenderSettings.reflectionIntensity = reflectionsIntensityMultiplier.Evaluate(progress);
         }
 
         void UpdateNight(float progress)
         {
-            // TODO Blaine
+            moon.gameObject.SetActive(true);
+            sun.gameObject.SetActive(false);
+
+            //light intensity
+            moon.intensity = moonIntensity.Evaluate(progress);
+
+            //change colors
+            moon.color = moonColor.Evaluate(progress);
+
+            moon.transform.eulerAngles = ((progress - 0.14f) / 1.5f) * noon * 4.0f;
+
+            RenderSettings.ambientIntensity = lightingIntensityMultiplier.Evaluate(progress);
+            RenderSettings.reflectionIntensity = reflectionsIntensityMultiplier.Evaluate(progress);
         }
     }
 }
