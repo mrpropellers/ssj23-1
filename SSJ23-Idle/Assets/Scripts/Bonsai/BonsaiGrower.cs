@@ -1,16 +1,21 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = Unity.Mathematics.Random;
 
 namespace LeftOut.GameJam.Bonsai
 {
     public class BonsaiGrower : MonoBehaviour
     {
+        int m_NumActiveTrunks = 1;
+        
+        [SerializeField, Range(0.01f, 1f)]
+        float GrowthInterval;
         [SerializeField]
-        float GrowthLength = 0.5f;
+        internal List<GrowingTreeLimb> BranchPrefabs;
         [SerializeField]
-        internal List<GrowingTrunk> Trunks;
+        internal List<GrowingTreeLimb> Trunks;
         // [SerializeField, Range(5f, 90f)]
         // float InPlaneStandardDeviation = 30f;
         // [SerializeField, Range(0f, 90f)]
@@ -40,11 +45,14 @@ namespace LeftOut.GameJam.Bonsai
             //     m_BonsaiNodes.Add(new BonsaiNode(rootSpline, i, 0));
             // }
         }
-
-        internal void GrowGeneration(int trunkIndex, float timeInterval)
+        
+        internal void GrowTrunks(float timeInterval)
         {
-            Debug.Log($"Growing trunk {trunkIndex} by {timeInterval}...");
-            Trunks[0].GrowByDistance(timeInterval, GrowthLength);
+            Debug.Log($"Growing trunks by {GrowthInterval} for {timeInterval} seconds ...");
+            for (var i = 0; i < m_NumActiveTrunks; ++i)
+            {
+                Trunks[i].GrowByProgress(timeInterval, GrowthInterval);
+            }
         }
         
         internal void GrowEntireTrunk(int trunkIndex)
