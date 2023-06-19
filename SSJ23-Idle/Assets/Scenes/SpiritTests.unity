@@ -482,6 +482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 396541198}
+  - component: {fileID: 396541199}
   m_Layer: 0
   m_Name: Spirit1 (1)
   m_TagString: Untagged
@@ -506,6 +507,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &396541199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396541197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626e65965a78682479bfb0582c8574cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalSpeed: 0.3
+  verticalSpeed: -0.1
+  amplitude: 0.8
+  tempPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &591818449
 GameObject:
   m_ObjectHideFlags: 0
@@ -4317,6 +4334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2023397129}
+  - component: {fileID: 2023397130}
   m_Layer: 0
   m_Name: Spirit1
   m_TagString: Untagged
@@ -4341,6 +4359,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2023397130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023397128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626e65965a78682479bfb0582c8574cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalSpeed: -0.2
+  verticalSpeed: 0.3
+  amplitude: 1.2
+  tempPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2052200346
 GameObject:
   m_ObjectHideFlags: 0
