@@ -9,6 +9,7 @@ namespace LeftOut.GameJam.Bonsai
     /// A class that enables us to debug the Bonsai mechanics while in the Editor, but that will not compile
     /// into our built game so we can ensure these functions aren't accessible to the end user
     /// </summary>
+    [RequireComponent(typeof(BonsaiGrower))]
     public class BonsaiDebugger : MonoBehaviour
     {
 #if UNITY_EDITOR
@@ -51,6 +52,11 @@ namespace LeftOut.GameJam.Bonsai
         {
             yield return new WaitForSeconds(timeToWait);
             m_Grower.SproutNewBranches();
+        }
+
+        internal void InitRandom()
+        {
+            m_Grower.Rand.InitState(RandSeed);
         }
 
         internal void ShowTrunks()

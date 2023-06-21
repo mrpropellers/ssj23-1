@@ -44,9 +44,7 @@ namespace LeftOut.GameJam.Editor
                 text = "Grow One Generation",
             };
 
-            var bonsaiGrower = bonsaiDebugger.GetComponent<BonsaiGrower>();
-            var initRand = HalfButton(() => 
-                bonsaiGrower.Rand.InitState(bonsaiDebugger.RandSeed), "Initialize Rand");
+            var initRand = HalfButton(bonsaiDebugger.InitRandom, "Initialize Rand");
             var testRand = HalfButton(bonsaiDebugger.VerifyNormalSampling, "Test Rand");
             var randRow = RowElement();
             randRow.Add(initRand);

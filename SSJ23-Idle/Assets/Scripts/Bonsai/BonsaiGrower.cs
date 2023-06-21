@@ -16,16 +16,16 @@ namespace LeftOut.GameJam.Bonsai
 
         [SerializeField, Range(1, 8)]
         int MaxPow2Branches = 4;
-        [SerializeField, Range(0.01f, 1f)]
-        float GrowthInterval;
+        [field: SerializeField, Range(0.01f, 1f)]
+        internal float GrowthInterval { get; private set; } = 0.2f;
         [SerializeField]
         internal List<GrowingTreeLimb> BranchPrefabs;
         [SerializeField]
         internal List<GrowingTreeLimb> Trunks;
-        [SerializeField, Range(0f, 10f)]
-        float NewSproutDuration = 3f;
-        [SerializeField, Range(0.01f, 0.5f)]
-        float NewSproutStartingProgress = 0.1f;
+        [field: SerializeField, Range(0f, 2f)]
+        internal float NewSproutDuration { get; private set; } = 0.5f;
+        [field: SerializeField, Range(0.01f, 0.5f)]
+        internal float NewSproutStartingProgress { get; private set; } = 0.4f;
         // [SerializeField, Range(5f, 90f)]
         // float InPlaneStandardDeviation = 30f;
         // [SerializeField, Range(0f, 90f)]
@@ -112,7 +112,7 @@ namespace LeftOut.GameJam.Bonsai
         /// </summary>
         void SproutBranches(BonsaiGrowerContext context, GrowingTreeLimb limb)
         {
-            var childrenFirst = Rand.NextBool();
+            var childrenFirst = Rand.NextFloat() < 0.75f;
 
             if (childrenFirst)
             {
@@ -129,6 +129,7 @@ namespace LeftOut.GameJam.Bonsai
                 // >>> TODO: Clamp forward to reasonable world limits somehow?
                 var orientation = Quaternion.LookRotation(tangent, Vector3.up);
                 var prefab = BranchPrefabs[NextBranchIndex()];
+                Debug.Log($"Spawning a {prefab.name}");
                 var sprout = limb.SproutBranch(prefab, position, orientation);
                 sprout.GrowByProgress(NewSproutDuration, NewSproutStartingProgress);
                 context.AcknowledgeNewSprout();
@@ -156,7 +157,7 @@ namespace LeftOut.GameJam.Bonsai
         int ComputeAmountNewBranches(BonsaiGrowerContext context, GrowingTreeLimb limb)
         {
             // TODO: This logic needs to be better eventually
-            const float branchesPerUnit = 0.25f;
+            const float branchesPerUnit = 0.4f;
             int maxAllowedBranches = 8;
             for (var i = 0; i < limb.Generation && i < 3; ++i)
             {
