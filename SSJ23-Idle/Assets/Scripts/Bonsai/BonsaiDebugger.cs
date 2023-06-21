@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using LeftOut.Extensions.Mathematics;
 
@@ -42,7 +43,14 @@ namespace LeftOut.GameJam.Bonsai
                 Debug.LogError("Can't grow Bonsai when not in Play mode!");
                 return;
             }
-            m_Grower.GrowTrunks(GrowthTime);
+            m_Grower.GrowTree(GrowthTime);
+            StartCoroutine(SproutBranchesAfterGrowth(GrowthTime));
+        }
+
+        IEnumerator SproutBranchesAfterGrowth(float timeToWait)
+        {
+            yield return new WaitForSeconds(timeToWait);
+            m_Grower.SproutNewBranches();
         }
 
         internal void ShowTrunks()
