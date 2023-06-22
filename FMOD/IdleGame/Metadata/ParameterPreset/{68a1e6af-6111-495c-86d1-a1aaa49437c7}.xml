@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{68a1e6af-6111-495c-86d1-a1aaa49437c7}">
+		<property name="name">
+			<value>Spirits</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9415e3c3-5bc7-4ade-a1cd-5bead407f36a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7e43593e-38ad-4830-924f-fc854abadeac}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7e43593e-38ad-4830-924f-fc854abadeac}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>7</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
