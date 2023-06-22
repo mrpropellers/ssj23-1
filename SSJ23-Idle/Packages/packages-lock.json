@@ -419,10 +419,11 @@
       "url": "https://packages.unity.com"
     },
     "leftout.toolkit": {
-      "version": "file:../../../LeftOutToolkit/LeftOutUnityTools",
+      "version": "https://github.com/mrpropellers/LeftOutToolkit.git?path=LeftOutUnityTools#ssj23-1",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "260aebee1c76987513ed8d625e0ae887ff0e449c"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

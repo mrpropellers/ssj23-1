@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4134049711775988767
 Transform:
   m_ObjectHideFlags: 0
@@ -25,14 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659492850863553557}
-  m_LocalRotation: {x: 0.2790016, y: 0.05155327, z: -0.05317465, w: 0.95743036}
-  m_LocalPosition: {x: 6.88, y: 16.12, z: -1.96}
+  m_LocalRotation: {x: 0.53242064, y: -0.20199548, z: -0.7914565, w: 0.22208734}
+  m_LocalPosition: {x: 6.44, y: 6.92, z: 9.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 270911932360198128}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 32.665, y: 4.705, z: -4.978}
+  m_LocalEulerAnglesHint: {x: -4.776, y: 290.651, z: 214.654}
 --- !u!108 &1722724763338691257
 Light:
   m_ObjectHideFlags: 0
@@ -45,7 +45,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 9049.587
+  m_Intensity: 100501.49
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -88,13 +88,13 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 6630
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -4.310208e-38}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
-  m_ShadowAngle: 0
+  m_ShadowAngle: 2.5
 --- !u!114 &4501952311408617321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 9049.587
+  m_Intensity: 100501.49
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_AreaLightShadowCone: 120
   m_UseScreenSpaceShadows: 0
   m_InteractsWithSky: 1
-  m_AngularDiameter: 0.5
+  m_AngularDiameter: 2.5
   m_FlareSize: 2
   m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
   m_FlareFalloff: 4
@@ -234,7 +234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2573875861045060196
 Transform:
   m_ObjectHideFlags: 0
@@ -242,14 +242,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5870243690548401262}
-  m_LocalRotation: {x: -0.40821788, y: 0.23456968, z: -0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.6037977, y: -0.21207239, z: -0.55214584, w: 0.534405}
   m_LocalPosition: {x: 5.7801743, y: 2.8242116, z: 12.047766}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 270911932360198128}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.277, y: -78.553, z: -111.824}
 --- !u!108 &3538402899036710015
 Light:
   m_ObjectHideFlags: 0
@@ -261,8 +261,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 47.746483
+  m_Color: {r: 0.27279508, g: 0.23535958, b: 0.38679248, a: 1}
+  m_Intensity: 309.92938
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -305,13 +305,13 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 9392
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
-  m_ShadowAngle: 0
+  m_ShadowAngle: 22
 --- !u!114 &4178036105635037839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,13 +324,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 47.746483
+  m_Intensity: 309.92938
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
-  m_VolumetricDimmer: 1
+  m_VolumetricDimmer: 2
   m_LightUnit: 2
   m_FadeDistance: 10000
   m_VolumetricFadeDistance: 10000
@@ -354,13 +354,13 @@ MonoBehaviour:
   m_AreaLightShadowCone: 120
   m_UseScreenSpaceShadows: 0
   m_InteractsWithSky: 1
-  m_AngularDiameter: 0.5
-  m_FlareSize: 2
-  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
-  m_FlareFalloff: 4
-  m_SurfaceTexture: {fileID: 0}
-  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
-  m_Distance: 1.5e+11
+  m_AngularDiameter: 22
+  m_FlareSize: 1.39
+  m_FlareTint: {r: 0, g: 0.0066247927, b: 0.122641504, a: 1}
+  m_FlareFalloff: 4.26
+  m_SurfaceTexture: {fileID: 2800000, guid: 9687a8ec6e9041f4fa1437488e60b51e, type: 3}
+  m_SurfaceTint: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+  m_Distance: 1e+9
   m_UseRayTracedShadows: 0
   m_NumRayTracingSamples: 4
   m_FilterTracedShadow: 1
@@ -459,7 +459,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7387232394574070923}
-  m_LocalRotation: {x: 0.4122587, y: -0.22739203, z: 0.12467977, w: 0.8733789}
+  m_LocalRotation: {x: 0.41225687, y: -0.22739099, z: 0.1246811, w: 0.8733798}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -467,7 +467,7 @@ Transform:
   - {fileID: 2573875861045060196}
   - {fileID: 4134049711775988767}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50.97, y: -27.872, z: 2.758}
 --- !u!114 &6714449664654148901
 MonoBehaviour:
@@ -476,12 +476,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7387232394574070923}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d1efb94b8c24494a3f4ff210b4be1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noon: {x: 0, y: 0, z: 0}
+  noon: {x: 0, y: 180, z: 0}
   sun: {fileID: 1722724763338691257}
   sunColor:
     serializedVersion: 2
