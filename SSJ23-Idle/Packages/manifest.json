@@ -37,6 +37,7 @@
     "com.unity.splines": "2.2.1",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.4",
+    "com.unity.toonshader": "0.9.4-preview",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.8.0",
     "leftout.toolkit": "https://github.com/mrpropellers/LeftOutToolkit.git?path=LeftOutUnityTools#ssj23-1",

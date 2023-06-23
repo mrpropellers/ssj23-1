@@ -24,9 +24,9 @@ MonoBehaviour:
     m_Value: 1
   windOrientation:
     m_OverrideState: 1
-    m_Value: 106
+    m_Value: 207
   windSpeed:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 100
   fogType:
     m_OverrideState: 0
@@ -186,13 +186,13 @@ MonoBehaviour:
     m_Value: 1000
   baseHeight:
     m_OverrideState: 1
-    m_Value: -198
+    m_Value: 0
   maximumHeight:
     m_OverrideState: 1
-    m_Value: 3000
+    m_Value: 4000
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 6000
+    m_Value: 2000
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -255,8 +255,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   fixedExposure:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 15
   compensation:
     m_OverrideState: 0
     m_Value: 0
@@ -484,7 +484,7 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0}
   bottomAltitude:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 500
   altitudeRange:
     m_OverrideState: 1
     m_Value: 2000
@@ -560,17 +560,17 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.15
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        time: 0.39443606
+        value: 0.99538666
+        inSlope: 0.1695439
+        outSlope: 0.1695439
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.07078892
         outWeight: 0
       - serializedVersion: 3
-        time: 1
-        value: 0.1
+        time: 0.89722216
+        value: 0.0976932
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -661,7 +661,7 @@ MonoBehaviour:
     m_Value: 0.5
   densityMultiplier:
     m_OverrideState: 1
-    m_Value: 0.596
+    m_Value: 0.585
   shapeFactor:
     m_OverrideState: 1
     m_Value: 0.859
@@ -673,29 +673,29 @@ MonoBehaviour:
     m_Value: {x: 0, y: -317, z: 0}
   erosionFactor:
     m_OverrideState: 1
-    m_Value: 0.914
+    m_Value: 0.669
   erosionScale:
     m_OverrideState: 1
-    m_Value: 89.4
+    m_Value: 38.9
   erosionNoiseType:
     m_OverrideState: 1
     m_Value: 1
   ambientLightProbeDimmer:
     m_OverrideState: 1
-    m_Value: 0.894
+    m_Value: 0.957
   sunLightDimmer:
     m_OverrideState: 1
-    m_Value: 0.428
+    m_Value: 0.568
   erosionOcclusion:
     m_OverrideState: 0
     m_Value: 0.1
   globalWindSpeed:
     m_OverrideState: 1
     m_Value:
-      mode: 2
+      mode: 3
       customValue: 100
       additiveValue: 10
-      multiplyValue: 1
+      multiplyValue: 2
   orientation:
     m_OverrideState: 0
     m_Value:
