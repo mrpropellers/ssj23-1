@@ -147,7 +147,7 @@ namespace LeftOut.GameJam.Bonsai
             {
                 return;
             }
-            limb.Branches.Shuffle();   
+            limb.ShuffleBranchOrder();   
             foreach (var branch in limb.Branches.Where(b => b.IsInitialized))
             {
                 SproutBranches(context, branch);

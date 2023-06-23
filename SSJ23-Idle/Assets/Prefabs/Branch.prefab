@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Mesh: {fileID: 4300000, guid: 500594a39d643774c8e028335ee33da7, type: 3}
-  m_Material: {fileID: 2100000, guid: 863715256888b184fb566639a2b188cc, type: 2}
+  m_Material: {fileID: 2100000, guid: f21c40ea37a377447b0889abddb17abd, type: 2}
   m_MeshRotation: {x: 0, y: 90, z: 0}
   m_MeshScale: {x: 2, y: 2, z: 2}
   m_StartScale: 0.05

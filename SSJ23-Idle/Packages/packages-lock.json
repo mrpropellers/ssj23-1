@@ -190,6 +190,16 @@
         "com.unity.terrain-tools": "5.0.1"
       }
     },
+    "com.unity.film-internal-utilities": {
+      "version": "0.18.4-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0",
+        "com.unity.timeline": "1.2.18"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.formats.fbx": {
       "version": "4.2.1",
       "depth": 1,
@@ -390,6 +400,16 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.toonshader": {
+      "version": "0.9.4-preview",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.film-internal-utilities": "0.18.4-preview",
+        "com.unity.render-pipelines.core": "10.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.ugui": {
       "version": "1.0.0",
       "depth": 0,
@@ -419,11 +439,12 @@
       "url": "https://packages.unity.com"
     },
     "leftout.toolkit": {
-      "version": "https://github.com/mrpropellers/LeftOutToolkit.git?path=LeftOutUnityTools#ssj23-1",
+      "version": "file:../../../LeftOutToolkit/LeftOutUnityTools",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "260aebee1c76987513ed8d625e0ae887ff0e449c"
+      "source": "local",
+      "dependencies": {
+        "com.unity.inputsystem": "^1.0.0"
+      }
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
