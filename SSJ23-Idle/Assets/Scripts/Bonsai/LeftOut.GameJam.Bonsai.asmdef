@@ -1,9 +1,13 @@
 {
     "name": "LeftOut.GameJam.Bonsai",
-    "rootNamespace": "",
+    "rootNamespace": "LeftOut.GameJam.Bonsai",
     "references": [
         "GUID:21d1eb854b91ade49bc69a263d12bee2",
-        "GUID:d8b63aba1907145bea998dd612889d6b"
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:140bdaea404cb864db60395231a236cd",
+        "GUID:704154a1cefb57c42a10ed8e95b42140",
+        "GUID:517d68e952e134045810d1ed7411423b",
+        "GUID:81259e72a08d1dc40876fd7c76377f75"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
