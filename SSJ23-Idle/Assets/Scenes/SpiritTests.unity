@@ -521,8 +521,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalSpeed: 0.3
   verticalSpeed: -0.1
+  rotationSpeed: 0.0005
   amplitude: 0.8
-  tempPosition: {x: 0, y: 0, z: 0}
+  tempPosition: {x: 1.17, y: 0.81, z: -6.45}
 --- !u!1 &591818449
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,8 +4374,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalSpeed: -0.2
   verticalSpeed: 0.3
+  rotationSpeed: 0.001
   amplitude: 1.2
-  tempPosition: {x: 0, y: 0, z: 0}
+  tempPosition: {x: -1.88, y: 0.48, z: -5.9}
 --- !u!1 &2052200346
 GameObject:
   m_ObjectHideFlags: 0
