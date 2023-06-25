@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Stylesheet.uss?fileID=7433441132597879392&amp;guid=45ac9f5d6aea24cb6840a462b7b24b6d&amp;type=3#Stylesheet" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.6); align-items: center; justify-content: center;">
+        <ui:Label tabindex="-1" text="Game Menu" display-tooltip-when-elided="true" style="-unity-font-definition: initial; -unity-font: url(&apos;project://database/Assets/UI/Font/DarumadropOne-Regular.ttf?fileID=12800000&amp;guid=a4c4b76aee9d14ea5ae870c6c93df545&amp;type=3#DarumadropOne-Regular&apos;); font-size: 32px; -unity-text-align: upper-center; margin-bottom: 24px; padding-bottom: 0; margin-right: 2px; color: rgb(255, 255, 255);" />
+        <ui:Button text="Resume" display-tooltip-when-elided="true" name="ButtonResume" class="button" style="border-left-color: rgba(168, 168, 168, 0); border-right-color: rgba(168, 168, 168, 0); border-top-color: rgba(168, 168, 168, 0); border-bottom-color: rgba(168, 168, 168, 0); background-color: rgba(188, 188, 188, 0); margin-bottom: 16px;" />
+        <ui:Button text="Quit" display-tooltip-when-elided="true" name="ButtonQuit" class="button" style="border-left-color: rgba(168, 168, 168, 0); border-right-color: rgba(168, 168, 168, 0); border-top-color: rgba(168, 168, 168, 0); border-bottom-color: rgba(168, 168, 168, 0); background-color: rgba(188, 188, 188, 0); margin-bottom: 2px;" />
+    </ui:VisualElement>
+</ui:UXML>
