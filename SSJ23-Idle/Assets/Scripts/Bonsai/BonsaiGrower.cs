@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using SplineMesh;
+using LeftOut.GameJam.Clock;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = Unity.Mathematics.Random;
-using LeftOut.Extensions;
 
 namespace LeftOut.GameJam.Bonsai
 {
@@ -13,11 +11,17 @@ namespace LeftOut.GameJam.Bonsai
     {
         int m_NumActiveTrunks = 1;
         int m_CurrentBranchPrefabIndex = 0;
+        int m_ActiveGrowthIndex;
+
+        List<GrowingTreeLimb> m_ActiveGrowth;
 
         [SerializeField, Range(1, 8)]
         int MaxPow2Branches = 4;
         [field: SerializeField, Range(0.01f, 1f)]
         internal float GrowthInterval { get; private set; } = 0.2f;
+
+        [SerializeField, Range(1, 8)]
+        int MaxGrowStepsPerFrame = 2;
         [SerializeField]
         internal List<GrowingTreeLimb> BranchPrefabs;
         [SerializeField]
@@ -65,12 +69,57 @@ namespace LeftOut.GameJam.Bonsai
             {
                 trunk.Generation = 0;
             }
+            m_ActiveGrowth = new List<GrowingTreeLimb>();
+
+            if (PomodoroTimer.Exists)
+            {
+                PomodoroTimer.Instance.SessionStarted.AddListener(OnSessionStart);
+                PomodoroTimer.Instance.SessionEnded.AddListener(OnSessionEnd);
+            }
             //m_BonsaiNodes.Clear();
             // var rootSpline = m_SplineContainer.Spline;
             // for(var i = 0; i < m_SplineContainer.Spline.Count; ++i)
             // {
             //     m_BonsaiNodes.Add(new BonsaiNode(rootSpline, i, 0));
             // }
+        }
+
+        void Update()
+        {
+            if (m_ActiveGrowth.Count == 0)
+            {
+                return;
+            }
+
+            var limbIndex = m_ActiveGrowthIndex;
+            var numLimbsStepped = 0;
+            for (var numLimbsInspected = 0; 
+                 numLimbsInspected < m_ActiveGrowth.Count && numLimbsStepped < MaxGrowStepsPerFrame; 
+                 ++numLimbsInspected)
+            {
+                if (limbIndex >= m_ActiveGrowth.Count)
+                {
+                    limbIndex = 0;
+                }
+                var limb = m_ActiveGrowth[limbIndex];
+                if (limb.IsActivelyGrowing)
+                {
+                    limb.DoGrowthUpdate();
+                    ++numLimbsStepped;
+                }
+                
+                // Check whether limb is still growing after the growth update (that may have been it's final one)
+                if (limb.IsActivelyGrowing)
+                {
+                    ++limbIndex;
+                }
+                else
+                {
+                    m_ActiveGrowth.RemoveAt(limbIndex);
+                }
+            }
+
+            m_ActiveGrowthIndex = limbIndex;
         }
 
         IEnumerable<GrowingTreeLimb> ActiveTrunks
@@ -83,13 +132,19 @@ namespace LeftOut.GameJam.Bonsai
                 }
             }
         }
-        
+
         internal void GrowTree(float timeInterval)
         {
             Debug.Log($"Growing tree by {GrowthInterval} for {timeInterval} seconds ...");
+            m_ActiveGrowth.RemoveAll(limb => !limb.IsActivelyGrowing);
+            if (m_ActiveGrowth.Count != 0)
+            {
+                Debug.LogWarning($"Still have {m_ActiveGrowth.Count} limbs growing. They may get clobbered.");
+            }
             foreach (var trunk in ActiveTrunks)
             {
-                trunk.GrowByProgress(timeInterval, GrowthInterval);
+                BeginLimbGrowth(trunk, GrowthInterval, timeInterval);
+                BeginAllBranchGrowth(trunk.Branches, GrowthInterval, timeInterval);
             }
         }
 
@@ -97,11 +152,47 @@ namespace LeftOut.GameJam.Bonsai
         {
             var numGrowingBranches = ActiveTrunks.Sum(trunk => trunk.CountGrowingBranches());
             var numAllowedSprouts = MaxAllowedGrowingBranches - numGrowingBranches;
-            var context = new BonsaiGrowerContext(numAllowedSprouts);
+            var context = new BranchSproutingContext(numAllowedSprouts);
             foreach (var trunk in ActiveTrunks)
             {
                 SproutBranches(context, trunk);
             }
+        }
+
+        void BeginAllBranchGrowth(IEnumerable<GrowingTreeLimb> branches, float growthInterval, float timeInterval)
+        {
+            foreach (var branch in branches)
+            {
+                if (branch.HasAnyBranches)
+                {
+                    BeginAllBranchGrowth(branch.Branches, growthInterval, timeInterval);
+                }
+                BeginLimbGrowth(branch, growthInterval, timeInterval);
+            }
+        }
+
+        void BeginLimbGrowth(GrowingTreeLimb limb, float growthInterval, float timeInterval)
+        {
+            if (m_ActiveGrowth.Contains(limb))
+            {
+                Debug.LogWarning($"{limb} was already growing - old targets will be overwritten.");
+            }
+            else
+            {
+                m_ActiveGrowth.Add(limb);
+            }
+            
+            limb.SetGrowthTarget(growthInterval, timeInterval);   
+        }
+
+        void OnSessionStart(PomodoroSession session)
+        {
+            
+        }
+
+        void OnSessionEnd(PomodoroSession session)
+        {
+            
         }
 
         /// <summary>
@@ -110,7 +201,7 @@ namespace LeftOut.GameJam.Bonsai
         /// doesn't have enough context. The BonsaiGrower will (eventually) hold the game state
         /// that determines how many branches to grow and by how much
         /// </summary>
-        void SproutBranches(BonsaiGrowerContext context, GrowingTreeLimb limb)
+        void SproutBranches(BranchSproutingContext context, GrowingTreeLimb limb)
         {
             var childrenFirst = Rand.NextFloat() < 0.75f;
 
@@ -131,7 +222,7 @@ namespace LeftOut.GameJam.Bonsai
                 var prefab = BranchPrefabs[NextBranchIndex()];
                 Debug.Log($"Spawning a {prefab.name}");
                 var sprout = limb.SproutBranch(prefab, position, orientation);
-                sprout.GrowByProgress(NewSproutDuration, NewSproutStartingProgress);
+                BeginLimbGrowth(sprout, NewSproutStartingProgress, NewSproutDuration);
                 context.AcknowledgeNewSprout();
             }
 
@@ -141,7 +232,7 @@ namespace LeftOut.GameJam.Bonsai
             }
         }
 
-        void SproutFromChildBranches(BonsaiGrowerContext context, GrowingTreeLimb limb)
+        void SproutFromChildBranches(BranchSproutingContext context, GrowingTreeLimb limb)
         {
             if (!limb.IsInitialized)
             {
@@ -154,7 +245,7 @@ namespace LeftOut.GameJam.Bonsai
             }
         }
 
-        int ComputeAmountNewBranches(BonsaiGrowerContext context, GrowingTreeLimb limb)
+        int ComputeAmountNewBranches(BranchSproutingContext context, GrowingTreeLimb limb)
         {
             // TODO: This logic needs to be better eventually
             const float branchesPerUnit = 0.4f;
@@ -172,7 +263,7 @@ namespace LeftOut.GameJam.Bonsai
         internal void GrowEntireTrunk(int trunkIndex)
         {
             var trunk = Trunks[trunkIndex];
-            Trunks[trunkIndex].GrowByProgress(0, 1f);
+            BeginLimbGrowth(trunk, 1f, 0f);
         }
     }
 }

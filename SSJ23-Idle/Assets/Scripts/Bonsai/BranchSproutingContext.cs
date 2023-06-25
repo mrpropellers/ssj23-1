@@ -1,8 +1,8 @@
 ﻿namespace LeftOut.GameJam.Bonsai
 {
-    class BonsaiGrowerContext
+    class BranchSproutingContext
     {
-        internal BonsaiGrowerContext(int sproutCount)
+        internal BranchSproutingContext(int sproutCount)
         {
             SproutsRemaining = sproutCount;
         }
