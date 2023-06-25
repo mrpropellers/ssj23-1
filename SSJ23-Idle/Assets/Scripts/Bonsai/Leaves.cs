@@ -36,6 +36,7 @@ namespace LeftOut.GameJam.Bonsai
             if (m_CurrentGrowthStage == 0)
             {
                 m_Renderer = GetComponent<SpriteRenderer>();
+                // TODO: This value should be informed by whether we're to the left or right of the trunk Spline
                 m_Renderer.flipX = Random.value > 0.5f;
                 if (transform.rotation.eulerAngles.z > MaxRollAllowed)
                 {

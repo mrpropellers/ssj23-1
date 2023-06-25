@@ -19,6 +19,10 @@ namespace LeftOut.GameJam.Clock
         // [SerializeField]
         // bool ShouldPauseBetweenSessions = true;
 
+        #if UNITY_EDITOR
+        [SerializeField]
+        #endif
+        bool PauseBetweenSessions = true;
         [SerializeField]
         TimerSettings DefaultSettings;
         [field: SerializeField]
@@ -47,7 +51,6 @@ namespace LeftOut.GameJam.Clock
                 m_TimeInSession += Time.deltaTime;
                 if (m_TimeInSession >= m_CurrentSessionLength)
                 {
-                    SessionEnded?.Invoke(m_CurrentSession);
                     MoveToNextSession();
                 }
             }
@@ -59,6 +62,7 @@ namespace LeftOut.GameJam.Clock
             if (!m_CurrentSessionHasStarted)
             {
                 m_CurrentSessionHasStarted = true;
+                Debug.Log($"Starting session: {m_CurrentSession}");
                 SessionStarted?.Invoke(m_CurrentSession);
             }
         }
@@ -99,12 +103,22 @@ namespace LeftOut.GameJam.Clock
 
         void ChangeSession(PomodoroSession newSession)
         {
-            Pause();
-            Debug.Log($"Changing session from {m_CurrentSession} to {newSession}");
+            Debug.Log($"Ending session: {m_CurrentSession}");
+            SessionEnded?.Invoke(m_CurrentSession);
+            //Debug.Log($"Changing session from {m_CurrentSession} to {newSession}");
             m_CurrentSession = newSession;
             m_CurrentSessionLength = m_Settings.LookUpDuration(newSession);
             m_TimeInSession = 0f;
             m_CurrentSessionHasStarted = false;
+            if (PauseBetweenSessions)
+            {
+                Pause();
+            }
+            else
+            {
+                m_CurrentSessionHasStarted = true;
+                SessionStarted?.Invoke(m_CurrentSession);
+            }
         }
         
         void Initialize_impl(TimerSettings settings)

@@ -2,29 +2,31 @@
 
 namespace LeftOut.GameJam.Bonsai
 {
+    [System.Serializable]
     class GrowthTracker
     {
-        internal readonly double StartTime;
-        internal readonly double RatePerSecond;
         internal readonly float StartProgress;
         internal readonly float FinalProgress;
 
-        internal GrowthTracker(float startProgress, float finalProgress, float growthDuration)
+        internal GrowthTracker(float startProgress, float finalProgress)
         {
-            StartTime = Time.timeAsDouble;
+            if (finalProgress > 1f)
+            {
+                Debug.LogWarning($"Attempting to grow past 100% of Spline length. Clamping.");
+                finalProgress = 1f;
+            }
+
+            if (startProgress > finalProgress)
+            {
+                Debug.LogWarning($"{nameof(startProgress)} must be <= {nameof(finalProgress)}. Clamping...");
+                startProgress = finalProgress;
+            }
+
             StartProgress = startProgress;
             FinalProgress = finalProgress;
-            RatePerSecond = 1.0 / growthDuration;
         }
 
-        internal double TimeElapsed => Time.timeAsDouble - StartTime;
-        internal float CurrentProgressTarget
-        {
-            get
-            {
-                var t = Mathf.Clamp01((float)(TimeElapsed * RatePerSecond));
-                return Mathf.Lerp(StartProgress, FinalProgress, t);
-            }
-        }
+        internal float ComputeProgress(float t) => 
+            Mathf.Lerp(StartProgress, FinalProgress, t);
     }
 }

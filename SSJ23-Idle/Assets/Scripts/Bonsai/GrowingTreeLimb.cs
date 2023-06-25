@@ -8,11 +8,11 @@ using UnityEngine;
 using SplineMesh;
 using Random = Unity.Mathematics.Random;
 using LeftOut.Toolkit;
+using LeftOut.UnityMath;
 
 namespace LeftOut.GameJam.Bonsai
 {
     [RequireComponent(typeof(Spline))]
-    //[ExecuteAlways]
     public class GrowingTreeLimb : MonoBehaviour
     {
         // Scale can't start at zero for some reason, so need to set an initial size
@@ -20,13 +20,15 @@ namespace LeftOut.GameJam.Bonsai
 
         internal GrowthTracker GrowthState { get; private set; }
 
+        // Small fudge factor to stop all the branches from hitting a new leaf stage in the same frame
+        float m_LeafFudgeFactor;
         GameObject m_Generated;
         Spline m_Spline;
         MeshBender m_MeshBender;
         MeshRenderer m_Renderer;
         float m_CurrentGrowthProgress;
         List<GrowingTreeLimb> m_Branches;
-
+        
         [SerializeField]
         Leaves m_Leaves;
         [SerializeField]
@@ -44,12 +46,12 @@ namespace LeftOut.GameJam.Bonsai
 
         // NOTE: This does not check whether those branches have been destroyed since last access
         internal bool HasAnyBranches => m_Branches.Any();
-        internal bool IsActivelyGrowing => 
-            Math.Abs(m_CurrentGrowthProgress - GrowthState.FinalProgress) < float.Epsilon;
+        internal bool IsActivelyGrowing => GrowthState != null && 
+            m_CurrentGrowthProgress < GrowthState.FinalProgress;
         bool HasLeaves => m_Leaves != null;
-        bool ShouldGrowLeaves => !IsActivelyGrowing && HasLeaves &&
-            (float)m_Leaves.TargetGrowthStage / m_Leaves.NumStages < GrowthState.FinalProgress;
-        
+        internal bool ShouldGrowLeaves => HasLeaves && m_Leaves.TargetGrowthStage < m_Leaves.NumStages &&
+            (float)m_Leaves.TargetGrowthStage / m_Leaves.NumStages + m_LeafFudgeFactor < m_CurrentGrowthProgress;
+
         internal bool IsInitialized { get; private set; }
         internal bool IsFullyGrown => !IsActivelyGrowing 
             && Math.Abs(m_CurrentGrowthProgress - 1f) < float.Epsilon;
@@ -62,6 +64,11 @@ namespace LeftOut.GameJam.Bonsai
         {
             get
             {
+                if (m_Branches == null)
+                {
+                    DebugExtras.LogWhenPaused("Tried to count branches before we initialized. None to count.");
+                    yield break;
+                }
                 for (var i = m_Branches.Count - 1; i >= 0; --i)
                 {
                     var branch = m_Branches[i];
@@ -88,16 +95,21 @@ namespace LeftOut.GameJam.Bonsai
             Destroy(gameObject);
         }
 
+        internal void GrowLeaves() => m_Leaves.GrowNextStage();
+
         void Awake()
         {
-            GrowthState = new GrowthTracker(0, 0, 0);
+            GrowthState = new GrowthTracker(0, 0);
         }
 
         void Start()
         {
             if (IsInitialized)
             {
-                Debug.LogWarning($"{name} was initialized before Start was called - something might be wrong.");
+                // This actually happens all the time because we Instantiate new branches and then immediately
+                // set grow targets in the same frame (before the new Object has a chance to do Awake/Start)
+                //Debug.LogWarning($"{name} was initialized before Start was called - something might be wrong.");
+                return;
             }
 
             Init();
@@ -125,11 +137,13 @@ namespace LeftOut.GameJam.Bonsai
 
             m_MeshBender = m_Generated.GetComponent<MeshBender>();
             m_Spline = GetComponent<Spline>();
+            m_LeafFudgeFactor = RandomNumbers.FromNeg1To1() * 0.35f;
 
             m_MeshBender.Source = SourceMesh.Build(m_Mesh).Rotate(Quaternion.Euler(m_MeshRotation)).Scale(m_MeshScale);
             m_MeshBender.Mode = MeshBender.FillingMode.StretchToInterval;
-            //m_MeshBender.SetInterval(m_Spline, 0, k_InitialScale);
-            GrowthState = new GrowthTracker(0, k_InitialScale, 0);
+            m_MeshBender.SetInterval(m_Spline, 0, k_InitialScale);
+            m_CurrentGrowthProgress = k_InitialScale;
+            GrowthState = new GrowthTracker(0, k_InitialScale);
             IsInitialized = true;
             //DoGrowthUpdate();
         }
@@ -155,30 +169,40 @@ namespace LeftOut.GameJam.Bonsai
 
         internal void ShuffleBranchOrder() => m_Branches.Shuffle();
 
-        internal int CountGrowingBranches()
+        /// <summary>
+        /// Returns count of branches which still have room to grow during Focus time
+        /// </summary>
+        internal int CountUnfinishedBranches()
         {
             // Add self to count if branch is not fully grown
             var count = IsFullyGrown ? 0 : 1;
             
             foreach (var branch in Branches)
             {
-                count += branch.CountGrowingBranches();
+                count += branch.CountUnfinishedBranches();
             }
 
             return count;
         }
 
-        internal void SetGrowthTarget(float progressInterval, float timeInterval)
+        internal void SetGrowthTarget(float progressInterval)
         {
             if (IsActivelyGrowing)
             {
                 Debug.LogWarning("Called grow again before previous finished. Overwriting.");
             }
 
+            if (!IsInitialized)
+            {
+                Debug.Log($"Attempting to {nameof(SetGrowthTarget)} before Initializing - doing that now.");
+                Init();
+            }
+
             GrowthState = new GrowthTracker(
                 m_CurrentGrowthProgress,
-                m_CurrentGrowthProgress + progressInterval,
-                timeInterval);
+                m_CurrentGrowthProgress + progressInterval);
+            DebugExtras.LogWhenPaused(
+                $"Setting growth target from {GrowthState.StartProgress} to {GrowthState.FinalProgress}");
         }
 
         internal CurveSample SampleNewBranchLocation(ref Random random)
@@ -196,7 +220,7 @@ namespace LeftOut.GameJam.Bonsai
             return sprout;
         }
 
-        internal void DoGrowthUpdate()
+        internal void DoGrowthUpdate(float progressThroughGrowthInterval)
         {
             if (!IsInitialized)
             {
@@ -205,7 +229,7 @@ namespace LeftOut.GameJam.Bonsai
                 return;
             }
             
-            var progress = GrowthState.CurrentProgressTarget;
+            var progress = GrowthState.ComputeProgress(progressThroughGrowthInterval);
             var nodeDistance = 0f;
             for (var i = 0; i < m_Spline.nodes.Count; ++i)
             {
@@ -225,14 +249,16 @@ namespace LeftOut.GameJam.Bonsai
                 m_MeshBender.ComputeIfNeeded();
             }
 
+            DebugExtras.LogWhenPaused($"Grew from {m_CurrentGrowthProgress} to {progress}");
             m_CurrentGrowthProgress = progress;
             if (HasLeaves)
             {
                 m_Leaves.transform.localPosition = m_Spline.GetSampleAtDistance(CurrentLength).location;
             }
+
             if (ShouldGrowLeaves)
             {
-                m_Leaves.GrowNextStage();
+                GrowLeaves();
             }
         }
     }

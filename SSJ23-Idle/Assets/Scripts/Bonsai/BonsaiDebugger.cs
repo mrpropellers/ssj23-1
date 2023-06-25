@@ -44,7 +44,7 @@ namespace LeftOut.GameJam.Bonsai
                 Debug.LogError("Can't grow Bonsai when not in Play mode!");
                 return;
             }
-            m_Grower.GrowTree(GrowthTime);
+            m_Grower.GrowTree();
             StartCoroutine(SproutBranchesAfterGrowth(GrowthTime));
         }
 
