@@ -12,19 +12,27 @@ namespace LeftOut.GameJam
 
         [Header("Ink JSON")]
         [SerializeField] private TextAsset inkJSON;
-
+        public string currentStoryKnot;
 
         private void OnMouseDown()
         {
-            if (!DialogueManager.GetInstance().dialogueIsPlaying) { 
-            dialogue_indicator.SetActive(false);
-            Debug.Log("Dialogue Triggered");
-            DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+            if (!DialogueManager.GetInstance().dialogueIsPlaying)
+            {
+                //if currentStoryKnot is THE_END then don't let the player continue the story.
+                if (currentStoryKnot != "THE_END")
+                {
+                    Debug.Log(this.name);
+                    dialogue_indicator.SetActive(false);
+                    Debug.Log("Dialogue Triggered");
+                    Debug.Log(inkJSON.ToString());
+                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON, this.name);
+                }
             }
         }
         private void Awake()
         {
             dialogue_indicator.SetActive(true);
+            currentStoryKnot = "greet";
 
         }
 
