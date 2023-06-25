@@ -14,7 +14,6 @@ namespace SplineMesh {
     /// </summary>
     [DisallowMultipleComponent]
     [RequireComponent(typeof(MeshFilter))]
-    [ExecuteInEditMode]
     public class MeshBender : MonoBehaviour {
         private bool isDirty = false;
         private Mesh result;
@@ -143,7 +142,7 @@ namespace SplineMesh {
             }
         }
 
-        private void OnDestroy() {
+        private void OnDisable() {
             if(curve != null) {
                 curve.Changed.RemoveListener(Compute);
             }

@@ -1,0 +1,18 @@
+{
+    "name": "SplineMesh.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:704154a1cefb57c42a10ed8e95b42140"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

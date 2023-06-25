@@ -1,8 +1,11 @@
 ﻿namespace LeftOut.GameJam.Bonsai
 {
-    class BonsaiGrowerContext
+    /// <summary>
+    /// Simple data container for keeping track of how many branches we've sprouted in a given grow cycle
+    /// </summary>
+    class BranchSproutingContext
     {
-        internal BonsaiGrowerContext(int sproutCount)
+        internal BranchSproutingContext(int sproutCount)
         {
             SproutsRemaining = sproutCount;
         }
