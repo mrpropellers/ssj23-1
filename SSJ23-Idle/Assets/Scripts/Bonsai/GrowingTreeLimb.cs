@@ -66,7 +66,7 @@ namespace LeftOut.GameJam.Bonsai
             {
                 if (m_Branches == null)
                 {
-                    DebugExtras.LogWhenPaused("Tried to count branches before we initialized. None to count.");
+                    DebugExtras.LogWhenPaused("Tried to count branches before we initialized. None to count.", this);
                     yield break;
                 }
                 for (var i = m_Branches.Count - 1; i >= 0; --i)
@@ -202,7 +202,7 @@ namespace LeftOut.GameJam.Bonsai
                 m_CurrentGrowthProgress,
                 m_CurrentGrowthProgress + progressInterval);
             DebugExtras.LogWhenPaused(
-                $"Setting growth target from {GrowthState.StartProgress} to {GrowthState.FinalProgress}");
+                $"Setting growth target from {GrowthState.StartProgress} to {GrowthState.FinalProgress}", this);
         }
 
         internal CurveSample SampleNewBranchLocation(ref Random random)
@@ -249,7 +249,7 @@ namespace LeftOut.GameJam.Bonsai
                 m_MeshBender.ComputeIfNeeded();
             }
 
-            DebugExtras.LogWhenPaused($"Grew from {m_CurrentGrowthProgress} to {progress}");
+            DebugExtras.LogWhenPaused($"Grew from {m_CurrentGrowthProgress} to {progress}", this);
             m_CurrentGrowthProgress = progress;
             if (HasLeaves)
             {

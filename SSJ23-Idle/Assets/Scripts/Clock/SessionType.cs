@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace LeftOut.GameJam.Clock
 {
-    public enum PomodoroSession 
+    public enum SessionType 
     {
         UnInitialized,
         Focus,

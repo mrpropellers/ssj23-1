@@ -1,0 +1,19 @@
+{
+    "name": "LeftOut.GameJam.UserInterface",
+    "rootNamespace": "LeftOut.GameJam.UserInterface",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:da964ca47a252e343a11768145c95a96",
+        "GUID:517d68e952e134045810d1ed7411423b",
+        "GUID:f97e8dd1f685d1747a203646bf9f6a42"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

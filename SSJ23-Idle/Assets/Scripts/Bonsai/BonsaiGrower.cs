@@ -98,12 +98,12 @@ namespace LeftOut.GameJam.Bonsai
             m_SproutGrowthRate = 1.0 / NewSproutDuration;
             m_HasSproutedInitialBranches = false;
 
-            if (PomodoroTimer.Exists)
+            if (Timer.Exists)
             {
                 m_GrowthTargets = GrowthTargets.PreGameSprouting;
-                PomodoroTimer.Pause();
-                PomodoroTimer.Instance.SessionStarted.AddListener(OnSessionStart);
-                PomodoroTimer.Instance.SessionEnded.AddListener(OnSessionEnd);
+                Timer.Pause();
+                Timer.Instance.SessionStarted.AddListener(OnSessionStart);
+                Timer.Instance.SessionEnded.AddListener(OnSessionEnd);
                 Trunks[0].SetGrowthTarget(m_StartingTrunkProgress);
                 m_ActiveGrowth.Add(Trunks[0]);
             }
@@ -140,17 +140,17 @@ namespace LeftOut.GameJam.Bonsai
             
         }
 
-        void OnSessionStart(PomodoroSession sessionStarted)
+        void OnSessionStart(SessionType sessionTypeStarted)
         {
-            if (sessionStarted == PomodoroSession.Focus)
+            if (sessionTypeStarted == SessionType.Focus)
             {
                 StartCoroutine(EnsureGrowthCompleteAndThen(GrowTree));
             }
         }
 
-        void OnSessionEnd(PomodoroSession sessionEnded)
+        void OnSessionEnd(SessionType sessionTypeEnded)
         {
-            if (sessionEnded == PomodoroSession.Focus)
+            if (sessionTypeEnded == SessionType.Focus)
             {
                 StartCoroutine(EnsureGrowthCompleteAndThen(SproutNewBranches));
             }
@@ -169,7 +169,7 @@ namespace LeftOut.GameJam.Bonsai
             return m_GrowthTargets switch
             {
                 GrowthTargets.None => 1f,
-                GrowthTargets.ExistingLimbs => PomodoroTimer.Exists ? PomodoroTimer.ProgressThroughSession : 1f,
+                GrowthTargets.ExistingLimbs => Timer.Exists ? Timer.ProgressThroughSession : 1f,
                 GrowthTargets.PreGameSprouting => ProgressThroughSproutInterval,
                 GrowthTargets.NewSprouts => ProgressThroughSproutInterval,
                 _ => throw new ArgumentOutOfRangeException($"No handling for {m_GrowthTargets}")
@@ -296,7 +296,7 @@ namespace LeftOut.GameJam.Bonsai
             }
             else
             {
-                DebugExtras.LogWhenPaused($"Not sprouting anything off {limb.name}");
+                DebugExtras.LogWhenPaused($"Not sprouting anything off {limb.name}", this);
             }
             for (var n = 0; n < numSprouts; ++n)
             {
@@ -305,7 +305,7 @@ namespace LeftOut.GameJam.Bonsai
                 var tangent = limb.transform.TransformDirection(sample.tangent);
                 var orientation = Quaternion.LookRotation(tangent, Vector3.up);
                 var prefab = BranchPrefabs[NextBranchIndex()];
-                DebugExtras.LogWhenPaused($"Spawning a {prefab.name}");
+                DebugExtras.LogWhenPaused($"Spawning a {prefab.name}", this);
                 var sprout = limb.SproutBranch(prefab, position, orientation);
                 //sprout.GrowLeaves();
                 BeginLimbGrowth(sprout, NewSproutStartingProgress);
@@ -340,7 +340,7 @@ namespace LeftOut.GameJam.Bonsai
                 var limb = m_ActiveGrowth[limbIndex];
                 if (limb.IsActivelyGrowing)
                 {
-                    DebugExtras.LogWhenPaused($"Growing {limb.name}...");
+                    DebugExtras.LogWhenPaused($"Growing {limb.name}...", this);
                     limb.DoGrowthUpdate(ComputeGrowthAmount());
                     ++numLimbsStepped;
                 }
@@ -352,11 +352,11 @@ namespace LeftOut.GameJam.Bonsai
                 }
                 else
                 {
-                    DebugExtras.LogWhenPaused($"{limb.name} is no longer growing. Removing from list.");
+                    DebugExtras.LogWhenPaused($"{limb.name} is no longer growing. Removing from list.", this);
                     m_ActiveGrowth.RemoveAt(limbIndex);
                 }
             }
-            DebugExtras.LogWhenPaused($"Grew {numLimbsStepped} limbs this frame.");
+            DebugExtras.LogWhenPaused($"Grew {numLimbsStepped} limbs this frame.", this);
             m_ActiveGrowthIndex = limbIndex;
         }
 

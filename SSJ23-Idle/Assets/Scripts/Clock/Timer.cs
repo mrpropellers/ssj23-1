@@ -4,13 +4,13 @@ using UnityEngine.Events;
 
 namespace LeftOut.GameJam.Clock
 {
-    public class PomodoroTimer : SingletonBehaviour<PomodoroTimer>
+    public class Timer : SingletonBehaviour<Timer>
     {
         [SerializeField]
         bool m_IsPlaying;
         
         TimerSettings m_Settings;
-        PomodoroSession m_CurrentSession;
+        SessionType m_CurrentSessionType;
         int m_NumShortBreaksTaken;
         bool m_CurrentSessionHasStarted;
         float m_TimeInSession;
@@ -26,17 +26,31 @@ namespace LeftOut.GameJam.Clock
         [SerializeField]
         TimerSettings DefaultSettings;
         [field: SerializeField]
-        public UnityEvent<PomodoroSession> SessionStarted { get; private set; }
+        public UnityEvent<SessionType> SessionStarted { get; private set; }
         [field: SerializeField]
-        public UnityEvent<PomodoroSession> SessionEnded { get; private set; }
+        public UnityEvent<SessionType> SessionEnded { get; private set; }
 
         // Returns a value in range [0-1] indicating how far through the current session we are
         public static float ProgressThroughSession => Instance.GetProgressThroughSession();
-        public static PomodoroSession CurrentSession => Instance.GetCurrentSession();
+        public static SessionType currentSessionType => Instance.GetCurrentSession();
 
         public static bool Exists => Instance != null;
+        public static bool IsPlaying => Exists && Instance.m_IsPlaying;
+        public static float CurrentTime => Instance.m_CurrentSessionLength - Instance.m_TimeInSession;
         public static void Play() => Instance.Play_impl();
         public static void Pause() => Instance.m_IsPlaying = false;
+
+        public static void Toggle()
+        {
+            if (Instance.m_IsPlaying)
+            {
+                Pause();
+            }
+            else
+            {
+                Play();
+            }
+        }
         
         void Start()
         {
@@ -62,8 +76,8 @@ namespace LeftOut.GameJam.Clock
             if (!m_CurrentSessionHasStarted)
             {
                 m_CurrentSessionHasStarted = true;
-                Debug.Log($"Starting session: {m_CurrentSession}");
-                SessionStarted?.Invoke(m_CurrentSession);
+                Debug.Log($"Starting session: {m_CurrentSessionType}");
+                SessionStarted?.Invoke(m_CurrentSessionType);
             }
         }
 
@@ -73,41 +87,41 @@ namespace LeftOut.GameJam.Clock
             return Mathf.Clamp01(m_TimeInSession / m_CurrentSessionLength);
         }
 
-        PomodoroSession GetCurrentSession() => m_CurrentSession;
+        SessionType GetCurrentSession() => m_CurrentSessionType;
 
         void MoveToNextSession()
         {
-            switch (m_CurrentSession)
+            switch (m_CurrentSessionType)
             {
-                case PomodoroSession.Focus:
+                case SessionType.Focus:
                     if (m_NumShortBreaksTaken == m_Settings.NumShortBreaks)
                     {
-                        ChangeSession(PomodoroSession.LongBreak);
+                        ChangeSession(SessionType.LongBreak);
                         m_NumShortBreaksTaken = 0;
                     }
                     else
                     {
-                        ChangeSession(PomodoroSession.ShortBreak);
+                        ChangeSession(SessionType.ShortBreak);
                         m_NumShortBreaksTaken++;
                     }
                     break;
-                case PomodoroSession.ShortBreak:
-                case PomodoroSession.LongBreak:
-                    ChangeSession(PomodoroSession.Focus);
+                case SessionType.ShortBreak:
+                case SessionType.LongBreak:
+                    ChangeSession(SessionType.Focus);
                     break;
-                case PomodoroSession.UnInitialized:
+                case SessionType.UnInitialized:
                 default:
                     throw new ArgumentOutOfRangeException();
             }
         }
 
-        void ChangeSession(PomodoroSession newSession)
+        void ChangeSession(SessionType newSessionType)
         {
-            Debug.Log($"Ending session: {m_CurrentSession}");
-            SessionEnded?.Invoke(m_CurrentSession);
+            Debug.Log($"Ending session: {m_CurrentSessionType}");
+            SessionEnded?.Invoke(m_CurrentSessionType);
             //Debug.Log($"Changing session from {m_CurrentSession} to {newSession}");
-            m_CurrentSession = newSession;
-            m_CurrentSessionLength = m_Settings.LookUpDuration(newSession);
+            m_CurrentSessionType = newSessionType;
+            m_CurrentSessionLength = m_Settings.LookUpDuration(newSessionType);
             m_TimeInSession = 0f;
             m_CurrentSessionHasStarted = false;
             if (PauseBetweenSessions)
@@ -117,7 +131,7 @@ namespace LeftOut.GameJam.Clock
             else
             {
                 m_CurrentSessionHasStarted = true;
-                SessionStarted?.Invoke(m_CurrentSession);
+                SessionStarted?.Invoke(m_CurrentSessionType);
             }
         }
         
@@ -127,7 +141,7 @@ namespace LeftOut.GameJam.Clock
             // TODO: We should check initialization status
             //  If status is NOT Uninitialized and we're NOT in Editor, something is wrong
             m_Settings = settings;
-            ChangeSession(PomodoroSession.Focus);
+            ChangeSession(SessionType.Focus);
         }
         
         

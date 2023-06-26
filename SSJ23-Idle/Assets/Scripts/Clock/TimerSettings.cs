@@ -25,19 +25,19 @@ namespace LeftOut.GameJam.Clock
         [field: Min(0f)]
         public float DurationLongBreakMinutes { get; private set; } = 25f;
 
-        public float LookUpDuration(PomodoroSession session)
+        public float LookUpDuration(SessionType sessionType)
         {
-            switch (session)
+            switch (sessionType)
             {
-                case PomodoroSession.Focus:
+                case SessionType.Focus:
                     return DurationFocusMinutes * 60f;
-                case PomodoroSession.ShortBreak:
+                case SessionType.ShortBreak:
                     return DurationShortBreakMinutes * 60f;
-                case PomodoroSession.LongBreak:
+                case SessionType.LongBreak:
                     return DurationLongBreakMinutes * 60f;
-                case PomodoroSession.UnInitialized:
+                case SessionType.UnInitialized:
                 default:
-                    Debug.LogError($"No session time defined for {session}");
+                    Debug.LogError($"No session time defined for {sessionType}");
                     return 0f;
             }
             
