@@ -1,5 +1,4 @@
-﻿using Codice.Client.Common;
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace LeftOut.GameJam.Clock
@@ -27,11 +26,11 @@ namespace LeftOut.GameJam.Clock
             // This is a 0-1 value that indicates progress through the session
             // 0 => session just started
             // 1 => session is ending
-            var progress = PomodoroTimer.ProgressThroughSession;
+            var progress = Timer.ProgressThroughSession;
             // This is an enum that tells you what type of session the user is currently doing
             // Right now we can just assume if they're focusing, it's daytime, and breaks happen at night
-            var session = PomodoroTimer.CurrentSession;
-            if (session == PomodoroSession.Focus)
+            var session = Timer.currentSessionType;
+            if (session == SessionType.Focus)
             {
                 UpdateDay(progress);
             }
