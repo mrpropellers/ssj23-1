@@ -12,15 +12,14 @@ public class SpriteMovement : MonoBehaviour{
     public Vector3 tempPosition;
     
     // Start is called before the first frame update
-    void Start(){
-        
+    void Start()
+    {
         tempPosition = transform.position;
-
     }
 
     // Update is called once per frame
-    void Update(){
-
+    void Update()
+    {
         tempPosition.x = Mathf.Cos(Time.time * horizontalSpeed) * amplitude;
         tempPosition.y = Mathf.Sin(Time.time * verticalSpeed) * amplitude;
 
