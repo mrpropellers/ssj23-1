@@ -1,9 +1,14 @@
 
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Serialization;
 
-    public class PanAndZoom : MonoBehaviour
+public class PanAndZoom : MonoBehaviour
     {
+        Vector3 m_InitialCameraPosition;
+        
+        [SerializeField]
+        float m_MaxPanDistance = 0.5f;
         [SerializeField]
         private float panSpeed = 2f;
         [SerializeField]
@@ -15,18 +20,18 @@ using Cinemachine;
         
         private CinemachineInputProvider inputProvider;
         private CinemachineVirtualCamera virtualCamera;
-        private Transform cameraTransform;
+        [SerializeField]
+        private Transform FollowTransform;
 
         private void Awake()
         {
             inputProvider = GetComponent<CinemachineInputProvider>();
             virtualCamera = GetComponent<CinemachineVirtualCamera>();
-            cameraTransform = virtualCamera.VirtualCameraGameObject.transform;
         }
 
         void Start()
         {
-        
+            m_InitialCameraPosition = virtualCamera.transform.position;
         }
 
 
@@ -76,10 +81,14 @@ using Cinemachine;
 
         public void PanScreen(float x, float y)
         {
-            Vector2 direction = PanDirection(x, y);
-            cameraTransform.position = Vector3.Lerp(cameraTransform.position,
-                                                    cameraTransform.position + (Vector3)direction * panSpeed,
-                                                    Time.deltaTime);
+            var direction = (Vector3)PanDirection(x, y);
+            var newPosition = FollowTransform.position + panSpeed * Time.deltaTime * direction;
+            var d = newPosition - m_InitialCameraPosition;
+            var displacementClamped = new Vector3(
+                Mathf.Clamp(d.x, -m_MaxPanDistance, m_MaxPanDistance),
+                Mathf.Clamp(d.y, -m_MaxPanDistance, m_MaxPanDistance),
+                0);
+            FollowTransform.position = m_InitialCameraPosition + displacementClamped;
         }
 
     }

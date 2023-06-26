@@ -1,0 +1,2965 @@
+fileFormatVersion: 2
+guid: 1bd35c532cd617d4da0e6e679bf23250
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: catfloater_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a57da2c5d2f830489be9642cb8614fb
+      internalID: 1917150012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_1
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 3796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2378f53127a26064e8ab384c3d2132e2
+      internalID: -1301983027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_2
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 3796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddda3b2d530d2e4392a169e6ac644c6
+      internalID: -703134903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_3
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 3796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632728d259f6fa54781263426ee7acbb
+      internalID: 2102884846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_4
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 3796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e3d418ec500374b9905a08539b3065
+      internalID: -133649598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_5
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 3796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ddf2ed831603064984a17c072cef9d9
+      internalID: 57616327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_6
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 3796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9766e762c837448ad1a56c71787158
+      internalID: 596518190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_7
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 3796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: febaa1c06631b314bb986585f1986089
+      internalID: -186324243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_8
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 3796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e072c16f10b3ef844bbbf646068359ec
+      internalID: 2042935699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_9
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 3796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1ee78a335d9804d9387b70f7c93ac5
+      internalID: 247897655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_10
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 3796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a341b7177bb53439eb99fcb61bc27a
+      internalID: 101790378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_11
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 3796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5c00805b7ac6442a6802c5ab16a473
+      internalID: -1166473460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3496
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d711626ed800dbb4daaa8c0eaac9a5b4
+      internalID: 620838911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_13
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 3496
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4645b9abf4fc6674b88bdec1ae1b22ca
+      internalID: -393496722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_14
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 3496
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de078cd6f326713479d0c4f42f3d5f9a
+      internalID: 267730919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_15
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 3496
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970e66aa64d4a7c418d325051e376b42
+      internalID: 1877574959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_16
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 3496
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19a9e03f5bc82d498889f608151ebd7
+      internalID: 1144903149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_17
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 3496
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6917a3a43e9e841bdfa24c1f1b061b
+      internalID: 1350604758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_18
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 3496
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41fa71aae0024946815ac511535c367
+      internalID: -2068165380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_19
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 3496
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6141dbf79b6c0a0468698e1a50339f5b
+      internalID: -910289188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_20
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 3496
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8cce96b12245f47a6ea19adab122e3
+      internalID: 790757044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_21
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 3496
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a370f17f9ceb2f6468879cbb6d9b7bcd
+      internalID: 716069619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_22
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 3496
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cbf028024b5444a98ec0c673e67fdb
+      internalID: 1985542172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_23
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 3496
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65ccf2683fe0b842b79db797ffef12d
+      internalID: -387306409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3196
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bdf3c4431e05ac408d5badaccadce0c
+      internalID: -1843493481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_25
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 3196
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86ddc01955ae0a4bbbd647f2a44460b
+      internalID: 964411382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_26
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 3196
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3180d00eceb52dd4ab2be8078348f059
+      internalID: 539988761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_27
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 3196
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427dc1a46161201449c41c9098b2e8b4
+      internalID: 1149751167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_28
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 3196
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98be909af9157e340a6e68850140efe0
+      internalID: 1676833866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_29
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 3196
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ce44518b351144c9b5cdc5688cf767
+      internalID: 1574427577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_30
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 3196
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c48f453de8d584b8b2aa7546cffb8e
+      internalID: -1297345384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_31
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 3196
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35c6f280e5ffbb40aa14a4ee70945a0
+      internalID: -1236157335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_32
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 3196
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4273d199afd224e808a07d4b8eda46
+      internalID: 1114483353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_33
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 3196
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e5358d63b30e14687a1876404c70ea
+      internalID: 1111179826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_34
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 3196
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 110f05e8ea14da34097e68636be1e748
+      internalID: -1128509267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_35
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 3196
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4ecfe73a6b1854b9f33a1cf85cd559
+      internalID: 1677363356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2896
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b223d4882b45c4d42bd36280f371d253
+      internalID: 1684205168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_37
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 2896
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3c040c2f958f447b673400de41902f
+      internalID: 1980531501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_38
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 2896
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ba7c6c67ec38449819a9afd8504e26
+      internalID: 1245742605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_39
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 2896
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702ea515a14404747b0331b6dd56f28e
+      internalID: -1637529745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_40
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 2896
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b004275474a2da4da4e63709b38d256
+      internalID: -457749916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_41
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 2896
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024210458fbfb1c4790450b877620e80
+      internalID: -1015419180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_42
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 2896
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5077fc83fdfb5d43885a1b130170111
+      internalID: 2325444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_43
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 2896
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786f0f91701d5304db68ca03d334c456
+      internalID: -1829222560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_44
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 2896
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb55bb5dd756f6419e780343f6cae2b
+      internalID: 1030487751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_45
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 2896
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fb2763387fc264583cce79bd4ee2ac
+      internalID: 1989936313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_46
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 2896
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc40009ec631bd2408ca1e823ee40598
+      internalID: -1766892040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_47
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 2896
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7aab533f133284fbc5b641b3399e69
+      internalID: -177950884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2596
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065e0f3e891004e4aa3b3f183e963d20
+      internalID: -569346839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_49
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 2596
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad1d2ef2b61d43459ffb9407dfaa9b8
+      internalID: 342186802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_50
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 2596
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5e311b2c92b8c448b9d3a13b604ef1
+      internalID: -896358884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_51
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 2596
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f93030f9ab665429f826d05a972ee7
+      internalID: 1259039093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_52
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 2596
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80dfa6019586d6946a219694d6174c5a
+      internalID: 673761906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_53
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 2596
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7086d713d29a2c745bc4509f06222cdd
+      internalID: 97929391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_54
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 2596
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afd47b85b663d840bea10c4f7f8c697
+      internalID: 1332516593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_55
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 2596
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20bebd86839ce049be518c763e1c3e6
+      internalID: 1609922979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_56
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 2596
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86ccc155f182c74d93cc00c0e096478
+      internalID: -2064520504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_57
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 2596
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a5c45eede1cb348bf5161de7734310
+      internalID: 2036503959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_58
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 2596
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df68ce8c899d074ca50ed91c07a7212
+      internalID: -1705577315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_59
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 2596
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe87390fd7dae94883df972f0f1aa42
+      internalID: 1981437176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2296
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9886f937834a90147a6409f62c234725
+      internalID: -942766412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_61
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 2296
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9750bb2cb300e44e856aa49a121ff46
+      internalID: 931364719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_62
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 2296
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb3bf67be252dc46852b0bf0466fd6a
+      internalID: 214232157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_63
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 2296
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962738b8ff4981f43a16e34948cf305a
+      internalID: 1770511497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_64
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 2296
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ccfaa33a1264a46a340c48f37ed79a
+      internalID: 496519422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_65
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 2296
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a877588b522bb4093cb53e76180fb2
+      internalID: 1887477882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_66
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 2296
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3044035c1066baa4fae9479fbd8ecd98
+      internalID: -955508586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_67
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 2296
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d376a0e7b683948945fe0af96d9a99
+      internalID: 596670346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_68
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 2296
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59761c0d01a4f14e8ac599a57281436
+      internalID: -2044628084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_69
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 2296
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9513b09b7518084eb7deb7dc6396024
+      internalID: 786345795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_70
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 2296
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00f3e9868266caa40931c2bce15dd3f0
+      internalID: -534904154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_71
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 2296
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93eb180cb7c53f469b651224296c51f
+      internalID: -266949456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1996
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0005d61ee3ef6cc4d99751dce55ce5a7
+      internalID: -807427679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_73
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1996
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b288e3bb99a5d041b8e350b6f62e03a
+      internalID: -1253045441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_74
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1996
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e2f8fe4ee613044bb4ec479e47b76b
+      internalID: 1753931843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_75
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1996
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ff6fade4507c646979c5bfc3ed389c
+      internalID: 1600769437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_76
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 1996
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe33b554c7e69149b2fc3833ca9a211
+      internalID: -1176161536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_77
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 1996
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4b3cb3fa14e254dbd09e918fb4a88d
+      internalID: 736465101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_78
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 1996
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9751e282ffdfa4bb8d06e4cdee1319
+      internalID: -1138566935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_79
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 1996
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6ae22c90e98754e9419a9a7bd225db
+      internalID: -1705779372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_80
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 1996
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197f87fa66f8cb846a22d092ca21b1ac
+      internalID: -1633081431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_81
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 1996
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0611cd63370de44491a1c165c941ca8
+      internalID: -283102320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_82
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 1996
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5a0d093fa714c43935f468c18be306
+      internalID: -1194571949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_83
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 1996
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95847091bd0e7b14daab3037a272af2a
+      internalID: -1793793211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1696
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64d2cbc12a23a147a4c9f1cc63cbf5e
+      internalID: -1025448148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_85
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1696
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff8916cd1189f248bacb94736d7d389
+      internalID: 1267392720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_86
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1696
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164f25df9a2ffc64c9aba94fe981fffe
+      internalID: 361460438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_87
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1696
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc96dd66f7a9d440aab0b6f6103599c
+      internalID: -265001324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_88
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 1696
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5741c88c0395da41b080bd2d64ef14b
+      internalID: 1241163440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_89
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 1696
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72be8d2f2b6d7b146aefb06c4f6c1040
+      internalID: 321910147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_90
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 1696
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0709752a71160584dafcbfe6add3c169
+      internalID: 1979355012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_91
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 1696
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848385f4479e52942a2a0443f216e7ea
+      internalID: 2116825113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_92
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 1696
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503e5daf6fa2e9b4488300c04ae7c875
+      internalID: -277421913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_93
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 1696
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653af62036df51641829a61a7bbdc012
+      internalID: -1408597617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_94
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 1696
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459be79e64ddafa4aab08e7d08e4f8d2
+      internalID: 93075568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_95
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 1696
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d09f7473a5d9f4f9bacbce168b2a02
+      internalID: 812580790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1396
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86516914bc9bea144abd670ec5a06ee8
+      internalID: 1967772283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_97
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1396
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75260f50708477c43bd5ead5c35f0aa9
+      internalID: -1299556417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_98
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1396
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4ef4677b41b794e83cc86266bedec6
+      internalID: 1319073944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_99
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1396
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf1ad8ca1e17864c8803f898426a08e
+      internalID: 2039090837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_100
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 1396
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803113957a2039d499931cf6d1be2ba0
+      internalID: -392260913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_101
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 1396
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916d3f9121049e143bba64c7d7aa835d
+      internalID: -1480648059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_102
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 1396
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33813c76fc9dbac4bbadf844be38538c
+      internalID: -1820762612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_103
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 1396
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f84fc7c097ecf945b1dba3c8f231e47
+      internalID: 1952339173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_104
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 1396
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09977e153f9dc2e45a7e3a69a742162b
+      internalID: 643589504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_105
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 1396
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3d667a97840634985f95eb7e1cf6ce
+      internalID: 225799750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_106
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 1396
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589c7ca0d255f13438ad83dc331315de
+      internalID: -1229590720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_107
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 1396
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0241cbad583fdce4a89b11e3ca011b85
+      internalID: -678804797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1096
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c992a7efbea6f42bd4c02615ee7f09
+      internalID: -630897187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_109
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1096
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b03087c333ed54fbec8df72c2bf29f
+      internalID: -550866536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_110
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1096
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ed68bfc7fbc764a806841e2adda4e5
+      internalID: -1200413872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_111
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1096
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d7f2b5510d1414a8db12e528a07c63
+      internalID: 81624262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_112
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 1096
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf98114bad119a44b6e1b45d192caab
+      internalID: 1358596329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_113
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 1096
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7b48e363825cd4dac56016b297decd
+      internalID: -180214804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_114
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 1096
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a341e91a9ee2047adef5cf00e44d03
+      internalID: -954396244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_115
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 1096
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6cfb17476bbe24398f07dd46c55c56
+      internalID: -633637319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_116
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 1096
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3220d368fa5f6479963f78863b5bbf
+      internalID: -57654391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_117
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 1096
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29db2d35cdfcad4f8534b7e7fe20399
+      internalID: 1738016666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_118
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 1096
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b64c0044cab55439493735e1393a33
+      internalID: -1602905813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_119
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 1096
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b4a20cfcc3b14409cf101aba17e5f6
+      internalID: -1641029522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9a80ddf39281047a376794fce22bbd
+      internalID: 1886632510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_121
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cabfdcd0769dc14599cdcce96f3d948
+      internalID: 1278367567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_122
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c585fad078a46794cba51a288b2dc7eb
+      internalID: -2117975089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_123
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9a4673718690449a1f00d7f79af7d1
+      internalID: 1642938677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_124
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728a4cc38880dde45b2f358cf9c80ea5
+      internalID: -1060894363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_125
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10bb08b759ab054418f815dd6d7a7158
+      internalID: -1682771661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_126
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f05407161958f46996bc58bfa6ad16
+      internalID: -30487640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_127
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eadf2bb363796145a007cb93e8f213d
+      internalID: 297525918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catfloater_idle_128
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 796
+        width: 326
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a098dff41b95476458e0caf2050059be
+      internalID: -2052116422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5bea89107835cad4d8991e82d4aa77f1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      catfloater_idle_0: 1917150012
+      catfloater_idle_1: -1301983027
+      catfloater_idle_10: 101790378
+      catfloater_idle_100: -392260913
+      catfloater_idle_101: -1480648059
+      catfloater_idle_102: -1820762612
+      catfloater_idle_103: 1952339173
+      catfloater_idle_104: 643589504
+      catfloater_idle_105: 225799750
+      catfloater_idle_106: -1229590720
+      catfloater_idle_107: -678804797
+      catfloater_idle_108: -630897187
+      catfloater_idle_109: -550866536
+      catfloater_idle_11: -1166473460
+      catfloater_idle_110: -1200413872
+      catfloater_idle_111: 81624262
+      catfloater_idle_112: 1358596329
+      catfloater_idle_113: -180214804
+      catfloater_idle_114: -954396244
+      catfloater_idle_115: -633637319
+      catfloater_idle_116: -57654391
+      catfloater_idle_117: 1738016666
+      catfloater_idle_118: -1602905813
+      catfloater_idle_119: -1641029522
+      catfloater_idle_12: 620838911
+      catfloater_idle_120: 1886632510
+      catfloater_idle_121: 1278367567
+      catfloater_idle_122: -2117975089
+      catfloater_idle_123: 1642938677
+      catfloater_idle_124: -1060894363
+      catfloater_idle_125: -1682771661
+      catfloater_idle_126: -30487640
+      catfloater_idle_127: 297525918
+      catfloater_idle_128: -2052116422
+      catfloater_idle_13: -393496722
+      catfloater_idle_14: 267730919
+      catfloater_idle_15: 1877574959
+      catfloater_idle_16: 1144903149
+      catfloater_idle_17: 1350604758
+      catfloater_idle_18: -2068165380
+      catfloater_idle_19: -910289188
+      catfloater_idle_2: -703134903
+      catfloater_idle_20: 790757044
+      catfloater_idle_21: 716069619
+      catfloater_idle_22: 1985542172
+      catfloater_idle_23: -387306409
+      catfloater_idle_24: -1843493481
+      catfloater_idle_25: 964411382
+      catfloater_idle_26: 539988761
+      catfloater_idle_27: 1149751167
+      catfloater_idle_28: 1676833866
+      catfloater_idle_29: 1574427577
+      catfloater_idle_3: 2102884846
+      catfloater_idle_30: -1297345384
+      catfloater_idle_31: -1236157335
+      catfloater_idle_32: 1114483353
+      catfloater_idle_33: 1111179826
+      catfloater_idle_34: -1128509267
+      catfloater_idle_35: 1677363356
+      catfloater_idle_36: 1684205168
+      catfloater_idle_37: 1980531501
+      catfloater_idle_38: 1245742605
+      catfloater_idle_39: -1637529745
+      catfloater_idle_4: -133649598
+      catfloater_idle_40: -457749916
+      catfloater_idle_41: -1015419180
+      catfloater_idle_42: 2325444
+      catfloater_idle_43: -1829222560
+      catfloater_idle_44: 1030487751
+      catfloater_idle_45: 1989936313
+      catfloater_idle_46: -1766892040
+      catfloater_idle_47: -177950884
+      catfloater_idle_48: -569346839
+      catfloater_idle_49: 342186802
+      catfloater_idle_5: 57616327
+      catfloater_idle_50: -896358884
+      catfloater_idle_51: 1259039093
+      catfloater_idle_52: 673761906
+      catfloater_idle_53: 97929391
+      catfloater_idle_54: 1332516593
+      catfloater_idle_55: 1609922979
+      catfloater_idle_56: -2064520504
+      catfloater_idle_57: 2036503959
+      catfloater_idle_58: -1705577315
+      catfloater_idle_59: 1981437176
+      catfloater_idle_6: 596518190
+      catfloater_idle_60: -942766412
+      catfloater_idle_61: 931364719
+      catfloater_idle_62: 214232157
+      catfloater_idle_63: 1770511497
+      catfloater_idle_64: 496519422
+      catfloater_idle_65: 1887477882
+      catfloater_idle_66: -955508586
+      catfloater_idle_67: 596670346
+      catfloater_idle_68: -2044628084
+      catfloater_idle_69: 786345795
+      catfloater_idle_7: -186324243
+      catfloater_idle_70: -534904154
+      catfloater_idle_71: -266949456
+      catfloater_idle_72: -807427679
+      catfloater_idle_73: -1253045441
+      catfloater_idle_74: 1753931843
+      catfloater_idle_75: 1600769437
+      catfloater_idle_76: -1176161536
+      catfloater_idle_77: 736465101
+      catfloater_idle_78: -1138566935
+      catfloater_idle_79: -1705779372
+      catfloater_idle_8: 2042935699
+      catfloater_idle_80: -1633081431
+      catfloater_idle_81: -283102320
+      catfloater_idle_82: -1194571949
+      catfloater_idle_83: -1793793211
+      catfloater_idle_84: -1025448148
+      catfloater_idle_85: 1267392720
+      catfloater_idle_86: 361460438
+      catfloater_idle_87: -265001324
+      catfloater_idle_88: 1241163440
+      catfloater_idle_89: 321910147
+      catfloater_idle_9: 247897655
+      catfloater_idle_90: 1979355012
+      catfloater_idle_91: 2116825113
+      catfloater_idle_92: -277421913
+      catfloater_idle_93: -1408597617
+      catfloater_idle_94: 93075568
+      catfloater_idle_95: 812580790
+      catfloater_idle_96: 1967772283
+      catfloater_idle_97: -1299556417
+      catfloater_idle_98: 1319073944
+      catfloater_idle_99: 2039090837
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
