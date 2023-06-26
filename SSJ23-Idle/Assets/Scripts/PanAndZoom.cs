@@ -41,7 +41,7 @@ using Cinemachine;
             }
             if (z != 0)
             {
-                ZoomScreen(z);
+                ZoomScreen(-z);
             }
         }
 

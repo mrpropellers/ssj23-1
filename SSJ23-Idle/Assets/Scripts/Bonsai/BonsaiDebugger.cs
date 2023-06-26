@@ -44,7 +44,7 @@ namespace LeftOut.GameJam.Bonsai
                 Debug.LogError("Can't grow Bonsai when not in Play mode!");
                 return;
             }
-            m_Grower.GrowTree(GrowthTime);
+            m_Grower.GrowTree();
             StartCoroutine(SproutBranchesAfterGrowth(GrowthTime));
         }
 
@@ -61,11 +61,10 @@ namespace LeftOut.GameJam.Bonsai
 
         internal void ShowTrunks()
         {
-            foreach (var trunk in GrowerNoNull.Trunks)
+            var grower = GrowerNoNull;
+            for (var i = 0; i < grower.Trunks.Count; i++)
             {
-                trunk.Reset();
-                Debug.Log($"Force-growing {trunk}");
-                trunk.GrowByProgress(0, 1f);
+                grower.GrowEntireTrunk(i);
             }
         }
 

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: QuickPomo
   m_EditorClassIdentifier: 
   <NumShortBreaks>k__BackingField: 1
-  <DurationFocusMinutes>k__BackingField: 1
-  <DurationShortBreakMinutes>k__BackingField: 0.25
+  <DurationFocusMinutes>k__BackingField: 0.5
+  <DurationShortBreakMinutes>k__BackingField: 0.2
   <DurationLongBreakMinutes>k__BackingField: 0.5
