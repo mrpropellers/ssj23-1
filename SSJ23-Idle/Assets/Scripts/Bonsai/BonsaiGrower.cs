@@ -5,6 +5,7 @@ using System.Linq;
 using LeftOut.GameJam.Clock;
 using LeftOut.Toolkit;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = Unity.Mathematics.Random;
 
 namespace LeftOut.GameJam.Bonsai
@@ -47,6 +48,13 @@ namespace LeftOut.GameJam.Bonsai
         internal float NewSproutDuration { get; private set; } = 0.5f;
         [field: SerializeField, Range(0.01f, 0.5f)]
         internal float NewSproutStartingProgress { get; private set; } = 0.4f;
+        
+        [field: SerializeField]
+        public UnityEvent NewBranchesSprouted { get; private set; }
+        [field: SerializeField]
+        public UnityEvent BranchGrowthStarted { get; private set; }
+        [field: SerializeField]
+        public UnityEvent BranchGrowthEnded { get; private set; }
 
         [SerializeField, Range(0f, 1f)]
         float m_StartingTrunkProgress = 0.6f;
@@ -152,6 +160,7 @@ namespace LeftOut.GameJam.Bonsai
         {
             if (sessionTypeEnded == SessionType.Focus)
             {
+                BranchGrowthEnded?.Invoke();
                 StartCoroutine(EnsureGrowthCompleteAndThen(SproutNewBranches));
             }
         }
@@ -247,6 +256,8 @@ namespace LeftOut.GameJam.Bonsai
             {
                 SproutBranchesOnLimb(context, trunk);
             }
+            
+            NewBranchesSprouted?.Invoke();
         }
 
         void BeginAllBranchGrowth(IEnumerable<GrowingTreeLimb> branches, float growthInterval)
@@ -258,6 +269,11 @@ namespace LeftOut.GameJam.Bonsai
                     BeginAllBranchGrowth(branch.Branches, growthInterval);
                 }
                 BeginLimbGrowth(branch, growthInterval);
+            }
+
+            if (m_ActiveGrowth.Any())
+            {
+                BranchGrowthStarted?.Invoke();
             }
         }
 
