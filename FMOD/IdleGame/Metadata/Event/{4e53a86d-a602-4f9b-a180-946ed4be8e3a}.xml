@@ -33,6 +33,9 @@
 		<relationship name="timeline">
 			<destination>{7feb2d6d-66ad-4749-9252-b0276317c6f9}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{57d19b4b-10b2-4c10-9727-21d693ca113d}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{ee06ae0d-876b-41ff-9395-8fd38ff5eee0}">
 		<relationship name="masterBus">
@@ -221,7 +224,6 @@
 		<property name="length">
 			<value>100</value>
 		</property>
-		<property name="name" />
 		<property name="minimumScatterDistance">
 			<value>2.60000014</value>
 		</property>
