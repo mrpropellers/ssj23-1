@@ -63,8 +63,8 @@ namespace LeftOut.GameJam
             currentStory = new Story(inkJSON.text); //generate the inky story object
             npcObject = GameObject.Find(npcDialogue); //find the NPC object that triggered the dialogue
 
-            //if currentStoryKnot is the greeting knot, don't set a new knot.
-            if (npcObject.GetComponent<DialogueTrigger>().currentStoryKnot != "greet") 
+            //if currentStoryKnot is NOT the greeting knot, then load where the player last left off.
+            if (npcObject.GetComponent<DialogueTrigger>().currentStoryKnot != "Greet") 
             { 
                 currentStory.ChoosePathString(npcObject.GetComponent<DialogueTrigger>().currentStoryKnot);
             }

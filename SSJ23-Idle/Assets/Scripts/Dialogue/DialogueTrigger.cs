@@ -19,6 +19,7 @@ namespace LeftOut.GameJam
             if (!DialogueManager.GetInstance().dialogueIsPlaying)
             {
                 //if currentStoryKnot is THE_END then don't let the player continue the story.
+                //this is where we should if the "stop" variable has been reset. 
                 if (currentStoryKnot != "THE_END")
                 {
                     Debug.Log(this.name);
@@ -32,7 +33,7 @@ namespace LeftOut.GameJam
         private void Awake()
         {
             dialogue_indicator.SetActive(true);
-            currentStoryKnot = "greet";
+            currentStoryKnot = "Greet";
 
         }
 
