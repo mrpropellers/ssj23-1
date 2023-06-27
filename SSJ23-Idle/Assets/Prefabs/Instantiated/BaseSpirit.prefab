@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626e65965a78682479bfb0582c8574cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ShouldTilt: 1
   horizontalSpeed: -0.2
   verticalSpeed: 0.3
   rotationSpeed: 0.001
@@ -238,9 +239,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.2735849, g: 0.13808295, b: 0.13808295, a: 1}
-  m_Intensity: 3023.122
-  m_Range: 20000
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 243.8766
+  m_Range: 2
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -301,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 37989.67
+  m_Intensity: 3064.6438
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -398,7 +399,7 @@ MonoBehaviour:
   m_ShadowVariant: 0
   m_ShadowPrecision: 0
   useOldInspector: 0
-  useVolumetric: 1
+  useVolumetric: 0
   featuresFoldout: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
