@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1606.8313, g: 825.51965, b: 817.6046, a: 1}
+  m_IndirectSpecularColor: {r: 1606.7278, g: 825.5021, b: 817.58606, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4867,7 +4867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 151256904}
-  dialogueText: {fileID: 770844125}
+  dialogueText: {fileID: 483492263}
   continueStoryTracker: {fileID: 294293433}
   continueStoryButton: {fileID: 1806312331}
   choices:

@@ -33,14 +33,24 @@ public class Spirit : MonoBehaviour
         isInScene = false;
         spiritHasSpoken = false;
         dialogue_indicator.SetActive(false);
-        spiritHasSpoken = false;
+        spiritHasSpoken = true;
         currentStoryKnot = "Greet";
-    }   
+    }
 
-    void OnMouseUp()
+        private void Update()
+        {
+            if(isInScene == true && spiritHasSpoken == true) { 
+                dialogue_indicator.SetActive(false);
+            } else
+            {
+                dialogue_indicator.SetActive(true);
+            }
+        }
+
+        void OnMouseUp()
     {
         SpiritVocalized?.Invoke(SpiritVoiceType);
-        if (!SpiritDialogueManager.GetInstance().dialogueIsPlaying)
+        if (!SpiritDialogueManager.GetInstance().dialogueIsPlaying && spiritHasSpoken == false)
         {
             //if currentStoryKnot is THE_END then don't let the player continue the story.
             //this is where we should if the "stop" variable has been reset. 
@@ -49,9 +59,9 @@ public class Spirit : MonoBehaviour
                 Debug.Log(this.name);
                 dialogue_indicator.SetActive(false);
                 Debug.Log("Dialogue Triggered");
-                Debug.Log(inkJSON.ToString());
+                spiritHasSpoken = true;
                 SpiritDialogueManager.GetInstance().EnterDialogueMode(inkJSON, this.name, currentStoryKnot);
-                spiritHasSpoken = false;
+                
             }
         }
 

@@ -69,6 +69,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
             dialogueIsPlaying = true;
             dialoguePanel.SetActive(true);
             continueStoryButton.SetActive(true);
+            //npcObject.GetComponent<Spirit>().spiritHasSpoken = true;
             ContinueStory();
 
         }
@@ -77,6 +78,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
         {
             //return immediately if no dialogue is playing
             if (!dialogueIsPlaying) { return; }
+
             if (continueStoryTracker.activeSelf == true || makingChoices == true)
             {
                 continueStoryTracker.SetActive(false);

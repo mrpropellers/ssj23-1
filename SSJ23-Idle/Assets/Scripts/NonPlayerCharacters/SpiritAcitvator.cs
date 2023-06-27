@@ -24,6 +24,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
                 if (spirit.isInScene == true) { 
                     spirit.gameObject.SetActive(true);
                     spirit.transform.GetChild(0).gameObject.SetActive(true);
+                    spirit.spiritHasSpoken = false;
                 }
             }
 
@@ -55,9 +56,9 @@ namespace LeftOut.GameJam.NonPlayerCharacters
         {
             foreach (Spirit spirit in spirits)
             {
-                UnityEngine.Debug.Log(spirit.transform.GetChild(1).name);
+                UnityEngine.Debug.Log(spirit.transform.GetChild(0).name);
                 UnityEngine.Debug.Log("Child spirit name above.");
-                spirit.transform.GetChild(1).gameObject.SetActive(false);
+                spirit.transform.GetChild(0).gameObject.SetActive(false);
             }
 
         }
