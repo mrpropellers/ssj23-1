@@ -1,15 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
-using UnityEngine.Events;
 using LeftOut.GameJam.Clock;
-using LeftOut.GameJam.NonPlayerCharacters;
-using UnityEditor;
-//using Random = Unity.Mathematics;
 using System;
-using LeftOut.GameJam.Dialogue;
-using System.Diagnostics;
 
 namespace LeftOut.GameJam.NonPlayerCharacters
 {
@@ -21,7 +13,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
         {
             foreach (Spirit spirit in spirits)
             {
-                if (spirit.isInScene == true) { 
+                if (spirit.isInScene) { 
                     spirit.gameObject.SetActive(true);
                     spirit.transform.GetChild(0).gameObject.SetActive(true);
                     spirit.spiritHasSpoken = false;
@@ -40,7 +32,10 @@ namespace LeftOut.GameJam.NonPlayerCharacters
             //add all spirits who aren't in the scene to that list
             foreach (Spirit spirit in spirits)
             {
-                if (spirit.isInScene == false) { m_spirits.Add(spirit); }
+                if (!spirit.isInScene)
+                {
+                    m_spirits.Add(spirit);
+                }
             }
             UnityEngine.Debug.Log(m_spirits.ToString());
             //if there's at least one spirit on that list, pick one at random and then add then flag it as in scene
@@ -68,6 +63,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
  
             if (PomoTimer.Exists) {
                 PomoTimer.Instance.SessionStarted.AddListener(OnSessionStarted);
+                PomoTimer.Instance.SessionEnded.AddListener(OnSessionEnded);
             }
 
         }
@@ -90,8 +86,9 @@ namespace LeftOut.GameJam.NonPlayerCharacters
                     break;
 
                 case SessionType.Focus:
-                    UnityEngine.Debug.Log("Daylight is here hide them spirits!");
-                    DeactivateSpirits();
+                    // (Devin): Moving this to OnSessionEnded
+                    //UnityEngine.Debug.Log("Daylight is here hide them spirits!");
+                    //DeactivateSpirits();
                     break;
                 
                 case SessionType.UnInitialized:
@@ -99,6 +96,24 @@ namespace LeftOut.GameJam.NonPlayerCharacters
                     throw new ArgumentOutOfRangeException();
             }
        
+        }
+
+        void OnSessionEnded(SessionType sessionEnded)
+        {
+            switch(sessionEnded)
+            {
+                case SessionType.ShortBreak:
+                case SessionType.LongBreak:
+                    UnityEngine.Debug.Log("Daylight is here hide them spirits!");
+                    DeactivateSpirits();
+                    break;
+
+                case SessionType.Focus:
+                case SessionType.UnInitialized:
+                default:
+                    break;
+            }
+            
         }
 
 

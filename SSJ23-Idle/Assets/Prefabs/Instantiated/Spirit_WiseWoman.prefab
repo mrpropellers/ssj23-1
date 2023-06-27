@@ -25,9 +25,17 @@ PrefabInstance:
       value: 0.5411765
       objectReference: {fileID: 0}
     - target: {fileID: 1740934656729933583, guid: 8f6f36fdacd4ef040b4b9d7ec1363973, type: 3}
+      propertyPath: inkJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: 177dfeecd049bf8488c2677c6fb082b8, type: 3}
+    - target: {fileID: 1740934656729933583, guid: 8f6f36fdacd4ef040b4b9d7ec1363973, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740934656729933583, guid: 8f6f36fdacd4ef040b4b9d7ec1363973, type: 3}
+      propertyPath: dialogue_indicator
+      value: 
+      objectReference: {fileID: 9072659099295706989}
     - target: {fileID: 2075468291604878431, guid: 8f6f36fdacd4ef040b4b9d7ec1363973, type: 3}
       propertyPath: m_Size.x
       value: 1.28
@@ -125,3 +133,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f6f36fdacd4ef040b4b9d7ec1363973, type: 3}
+--- !u!1 &9072659099295706989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6459496133121932505, guid: 8f6f36fdacd4ef040b4b9d7ec1363973, type: 3}
+  m_PrefabInstance: {fileID: 2615521438010020788}
+  m_PrefabAsset: {fileID: 0}

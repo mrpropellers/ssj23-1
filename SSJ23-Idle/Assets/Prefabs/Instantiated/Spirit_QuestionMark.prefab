@@ -9,9 +9,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1740934656729933583, guid: 8f6f36fdacd4ef040b4b9d7ec1363973, type: 3}
+      propertyPath: inkJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: 8e76d86d1fbb9ff4084c76df64b52ef6, type: 3}
+    - target: {fileID: 1740934656729933583, guid: 8f6f36fdacd4ef040b4b9d7ec1363973, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1740934656729933583, guid: 8f6f36fdacd4ef040b4b9d7ec1363973, type: 3}
+      propertyPath: dialogue_indicator
+      value: 
+      objectReference: {fileID: 3621309855615375628}
     - target: {fileID: 2075468291604878431, guid: 8f6f36fdacd4ef040b4b9d7ec1363973, type: 3}
       propertyPath: m_Size.x
       value: 1.28
@@ -89,3 +97,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f6f36fdacd4ef040b4b9d7ec1363973, type: 3}
+--- !u!1 &3621309855615375628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6459496133121932505, guid: 8f6f36fdacd4ef040b4b9d7ec1363973, type: 3}
+  m_PrefabInstance: {fileID: 7774839833933817301}
+  m_PrefabAsset: {fileID: 0}

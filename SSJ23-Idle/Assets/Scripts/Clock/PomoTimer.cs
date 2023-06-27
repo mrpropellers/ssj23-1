@@ -142,12 +142,12 @@ namespace LeftOut.GameJam.Clock
 
         void FastForward_impl()
         {
-            if (m_IsPlaying)
+            if (!m_IsPlaying)
             {
                 Play();
             }
 
-            m_TimerTimeScale = Mathf.Max(CurrentTime * 0.2f, 5f);
+            m_TimerTimeScale = Mathf.Max(CurrentTime * 0.4f, 10f);
         }
         
         void Initialize_impl(TimerSettings settings)
