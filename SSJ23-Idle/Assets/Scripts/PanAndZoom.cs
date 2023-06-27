@@ -60,19 +60,19 @@ public class PanAndZoom : MonoBehaviour
         //sets direction of pan as mouse travels to edge of screen
         public Vector2 PanDirection(float x, float y) {
             Vector2 direction = Vector2.zero;
-            if (y >= Screen.height * .95f)
+            if (y >= 0.5f)
             {
                 direction.y += 1;
             }
-            else if (y <= Screen.height * .05f)
+            else if (y <= -0.5f)
             {
                 direction.y -= 1;
             }
-            if (x >= Screen.width * .95f)
+            if (x >= 0.5f)
             {
                 direction.x += 1;
             }
-            else if (x <= Screen.width * .05f)
+            else if (x <= -0.5f)
             {
                 direction.x -= 1;
             }

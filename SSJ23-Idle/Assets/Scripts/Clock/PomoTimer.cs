@@ -15,6 +15,7 @@ namespace LeftOut.GameJam.Clock
         bool m_CurrentSessionHasStarted;
         float m_TimeInSession;
         float m_CurrentSessionLength;
+        float m_TimerTimeScale = 1f;
 
         // [SerializeField]
         // bool ShouldPauseBetweenSessions = true;
@@ -51,6 +52,8 @@ namespace LeftOut.GameJam.Clock
                 Play();
             }
         }
+
+        public static void FastForward() => Instance.FastForward_impl();
         
         void Start()
         {
@@ -63,7 +66,7 @@ namespace LeftOut.GameJam.Clock
         {
             if (m_IsPlaying)
             {
-                m_TimeInSession += Time.deltaTime;
+                m_TimeInSession += Time.deltaTime * m_TimerTimeScale;
                 if (m_TimeInSession >= m_CurrentSessionLength)
                 {
                     MoveToNextSession();
@@ -124,6 +127,7 @@ namespace LeftOut.GameJam.Clock
             m_CurrentSessionType = newSessionType;
             m_CurrentSessionLength = m_Settings.LookUpDuration(newSessionType);
             m_TimeInSession = 0f;
+            m_TimerTimeScale = 1f;
             m_CurrentSessionHasStarted = false;
             if (PauseBetweenSessions)
             {
@@ -134,6 +138,16 @@ namespace LeftOut.GameJam.Clock
                 m_CurrentSessionHasStarted = true;
                 SessionStarted?.Invoke(m_CurrentSessionType);
             }
+        }
+
+        void FastForward_impl()
+        {
+            if (m_IsPlaying)
+            {
+                Play();
+            }
+
+            m_TimerTimeScale = Mathf.Max(CurrentTime * 0.2f, 5f);
         }
         
         void Initialize_impl(TimerSettings settings)
