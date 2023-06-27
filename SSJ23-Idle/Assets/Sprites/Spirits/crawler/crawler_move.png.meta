@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 03e80868f40daa24599ccc8ab124d017
+guid: fc9ee14f538d4e54d9c275e9219da0f0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cat_walk_0
+      name: crawler_move_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1748
-        width: 326
-        height: 300
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6491d2190edba0c4db6841448982d323
-      internalID: -1899255241
+      spriteID: 1f2b88916f92b24469ca4b751fa3ecbc
+      internalID: -85881740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_1
+      name: crawler_move_1
       rect:
         serializedVersion: 2
-        x: 326
-        y: 1748
-        width: 326
-        height: 300
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fd220b4189e58b4e87fca79accc7647
-      internalID: 1996104172
+      spriteID: 2e6eee738429e9e429d14c17b3265867
+      internalID: 1378711811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_2
+      name: crawler_move_2
       rect:
         serializedVersion: 2
-        x: 652
-        y: 1748
-        width: 326
-        height: 300
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 027f247abc2439c42be57fcd93908d0b
-      internalID: -266770432
+      spriteID: 0a7d4f2388e81d540b7d69bae3bd1b72
+      internalID: -196529178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_3
+      name: crawler_move_3
       rect:
         serializedVersion: 2
-        x: 978
-        y: 1748
-        width: 326
-        height: 300
+        x: 768
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86ffa90bece855444ab240d933237c4c
-      internalID: -665873327
+      spriteID: ebeaa8bcaf283004e970257d492f1c45
+      internalID: -721365474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_4
+      name: crawler_move_4
       rect:
         serializedVersion: 2
-        x: 1304
-        y: 1748
-        width: 326
-        height: 300
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be5eb90dc80ed564a9d95e979102f574
-      internalID: -1659668640
+      spriteID: 20426419ee9ae7a41a5c9261e597232b
+      internalID: -1943082017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_5
+      name: crawler_move_5
       rect:
         serializedVersion: 2
-        x: 1630
-        y: 1748
-        width: 326
-        height: 300
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49a4dfd610529ea4d9cb57fa0d6870ee
-      internalID: 2132254716
+      spriteID: 3b9c125de4fb1b44aaf3173e71fb0cbf
+      internalID: 2019135988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_6
+      name: crawler_move_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1448
-        width: 326
-        height: 300
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2732f89d7f2315e43a4bb5fd9f08f6c6
-      internalID: 156223499
+      spriteID: 44be4699416aeeb49b7f5bfb3912a087
+      internalID: -1072000362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_7
+      name: crawler_move_7
       rect:
         serializedVersion: 2
-        x: 326
-        y: 1448
-        width: 326
-        height: 300
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18b06bb1b93a9a0439ed9e0425ea7982
-      internalID: 1899843707
+      spriteID: 2ff2b412a60ec4541af8584330b60274
+      internalID: -1366796658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_8
+      name: crawler_move_8
       rect:
         serializedVersion: 2
-        x: 652
-        y: 1448
-        width: 326
-        height: 300
+        x: 2048
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35639904ae5df1247925170275230d29
-      internalID: -1416862591
+      spriteID: 6e5def716380673429d596f6f3e88b66
+      internalID: 1730856989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_9
+      name: crawler_move_9
       rect:
         serializedVersion: 2
-        x: 978
-        y: 1448
-        width: 326
-        height: 300
+        x: 2304
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8b6327eb53972a4fb2a493592c54b4c
-      internalID: 318745330
+      spriteID: 967055a3f5e2ee242a21b0ef153fb9da
+      internalID: 376207473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_10
+      name: crawler_move_10
       rect:
         serializedVersion: 2
-        x: 1304
-        y: 1448
-        width: 326
-        height: 300
+        x: 2560
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf81dcb44e508754bb91ab73ec7e1815
-      internalID: 1348603481
+      spriteID: eccb4208e7ed67d449efbc8fb15e169c
+      internalID: -327817001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_11
+      name: crawler_move_11
       rect:
         serializedVersion: 2
-        x: 1630
-        y: 1448
-        width: 326
-        height: 300
+        x: 2816
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,20 +355,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6512eee6fe92aa443918f32feee422fb
-      internalID: 1479733240
+      spriteID: 0619527bb1c1f714e926449cebd618ef
+      internalID: -1597466605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_12
+      name: crawler_move_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1148
-        width: 326
-        height: 300
+        x: 3072
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,20 +376,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0155245bf3fa49d4b83d080b5629a89d
-      internalID: 386197357
+      spriteID: bf8f33418596dd345afd4a04136b0e1c
+      internalID: 1800039607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_13
+      name: crawler_move_13
       rect:
         serializedVersion: 2
-        x: 326
-        y: 1148
-        width: 326
-        height: 300
+        x: 3328
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,20 +397,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e518ab32879c3049bea39e76f761e69
-      internalID: 963164764
+      spriteID: e0a59fddcc3a0e247a28fe46d53e29f1
+      internalID: -1672815284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_14
+      name: crawler_move_14
       rect:
         serializedVersion: 2
-        x: 652
-        y: 1148
-        width: 326
-        height: 300
+        x: 3584
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,20 +418,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b098c2b424462b347a6c4f874c26c7a6
-      internalID: -793843534
+      spriteID: 31e015a511a2f724fba88dc1dc4735cb
+      internalID: -2040897264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_15
+      name: crawler_move_15
       rect:
         serializedVersion: 2
-        x: 978
-        y: 1148
-        width: 326
-        height: 300
+        x: 3840
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,62 +439,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60b3d00f4ffbbb042af0d4902369d2bb
-      internalID: 1178452130
+      spriteID: 35b2947faf0ccdf49bc3c822bff909cc
+      internalID: -736383125
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_16
-      rect:
-        serializedVersion: 2
-        x: 1304
-        y: 1148
-        width: 326
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f640b5718ed416b44b4fac1ba2892ba2
-      internalID: 263901589
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_walk_17
-      rect:
-        serializedVersion: 2
-        x: 1630
-        y: 1148
-        width: 326
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a90371cf1887c6f46b76033a9597be8c
-      internalID: -766668844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cat_walk_18
+      name: crawler_move_16
       rect:
         serializedVersion: 2
         x: 0
-        y: 848
-        width: 326
-        height: 300
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,20 +460,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 203ffdebef0ebc74a80a888e5ae4eba1
-      internalID: 344869667
+      spriteID: 3ce85de7ab5cb1a4db2a09ed92a8935d
+      internalID: -709084899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_19
+      name: crawler_move_17
       rect:
         serializedVersion: 2
-        x: 326
-        y: 848
-        width: 326
-        height: 300
+        x: 256
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -523,20 +481,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5879d8b108e531143a9713c79c261873
-      internalID: 2093262559
+      spriteID: 603d8a1908ea7fd4b93646d95e8b8295
+      internalID: 1820562796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_20
+      name: crawler_move_18
       rect:
         serializedVersion: 2
-        x: 652
-        y: 848
-        width: 326
-        height: 300
+        x: 512
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,20 +502,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 069d21fb9cddad4488a84023e3b639ce
-      internalID: -612926777
+      spriteID: 41f0699709d823c468e1173116747e62
+      internalID: -469965189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_21
+      name: crawler_move_19
       rect:
         serializedVersion: 2
-        x: 978
-        y: 848
-        width: 326
-        height: 300
+        x: 768
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,20 +523,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 198479659d86cf74797e35b032ba5818
-      internalID: -1890606364
+      spriteID: 436d4274937d97a41bbf0c6bd2eccc4a
+      internalID: -926551291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_22
+      name: crawler_move_20
       rect:
         serializedVersion: 2
-        x: 1304
-        y: 848
-        width: 326
-        height: 300
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -586,20 +544,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d637c5f9de9b9854e915d975995ab8c4
-      internalID: -450814181
+      spriteID: 424a1fb370a9f454f94f43b007266d14
+      internalID: -1608878344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_23
+      name: crawler_move_21
       rect:
         serializedVersion: 2
-        x: 1630
-        y: 848
-        width: 326
-        height: 300
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -607,20 +565,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a58146153eba1f44bf5757b78163ee3
-      internalID: -1570327781
+      spriteID: c65fec6bb80bb0c48a2ed444eeb84cb7
+      internalID: -1812589015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_24
+      name: crawler_move_22
       rect:
         serializedVersion: 2
-        x: 0
-        y: 548
-        width: 326
-        height: 300
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -628,20 +586,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5b3c801a5d58fd4c85f795e4d8eff1c
-      internalID: 434268062
+      spriteID: 8300c10062cb88344ae201d1d6ffed2d
+      internalID: -2048550857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_25
+      name: crawler_move_23
       rect:
         serializedVersion: 2
-        x: 326
-        y: 548
-        width: 326
-        height: 300
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -649,20 +607,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63eb09da04992c9489b2196db4a5a299
-      internalID: -381925587
+      spriteID: 0cc900bc843de6b468df902d426f9364
+      internalID: 1949783474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_26
+      name: crawler_move_24
       rect:
         serializedVersion: 2
-        x: 652
-        y: 548
-        width: 326
-        height: 300
+        x: 2048
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -670,20 +628,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef5f855adb646384cbaa6ff5b00b1447
-      internalID: 1822139340
+      spriteID: 2e9d1fc0785f0f4409480d9114ab81a2
+      internalID: -425571340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_27
+      name: crawler_move_25
       rect:
         serializedVersion: 2
-        x: 978
-        y: 548
-        width: 326
-        height: 300
+        x: 2304
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -691,20 +649,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab34e299c8566e6459429eae0be89491
-      internalID: -1094245401
+      spriteID: d3366cff88148fa44b76c4a1ec00aa8d
+      internalID: -140353893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_28
+      name: crawler_move_26
       rect:
         serializedVersion: 2
-        x: 1304
-        y: 548
-        width: 326
-        height: 300
+        x: 2560
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -712,20 +670,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06731f291d6b98240a1cb9b1072d8a45
-      internalID: 168472393
+      spriteID: 9d5171c524088214d96c05c88fa1d077
+      internalID: -1269571914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_29
+      name: crawler_move_27
       rect:
         serializedVersion: 2
-        x: 1630
-        y: 548
-        width: 326
-        height: 300
+        x: 2816
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -733,20 +691,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e42227d98d4fa446ac2166fd0ea7a76
-      internalID: -1729294415
+      spriteID: 0fdbb17b61db4944aae615d2c186c7ad
+      internalID: 475149672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_30
+      name: crawler_move_28
       rect:
         serializedVersion: 2
-        x: 0
-        y: 248
-        width: 326
-        height: 300
+        x: 3072
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -754,20 +712,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0941cea87ee3aa346ae9fb84cd2efcaa
-      internalID: 179145173
+      spriteID: d4b40ca547c242f4bb7f248ece9cd155
+      internalID: -684047690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_walk_31
+      name: crawler_move_29
       rect:
         serializedVersion: 2
-        x: 326
-        y: 248
-        width: 326
-        height: 300
+        x: 3328
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -775,8 +733,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc8508c817d3cd648922960d17005c32
-      internalID: 1729883857
+      spriteID: f7ec9be4ee0327f43bea11c975816678
+      internalID: -1878431083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawler_move_30
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957f1f2bb89a38145bb7f96352f7bdd6
+      internalID: 872201474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawler_move_31
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b887fce228f6d874abaeee1a322bb09f
+      internalID: 2025323476
       vertices: []
       indices: 
       edges: []
@@ -784,7 +784,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 5fdc27cb8d9813045a1082ed78c5203b
     internalID: 0
     vertices: []
     indices: 
@@ -792,38 +792,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cat_walk_0: -1899255241
-      Cat_walk_1: 1996104172
-      Cat_walk_10: 1348603481
-      Cat_walk_11: 1479733240
-      Cat_walk_12: 386197357
-      Cat_walk_13: 963164764
-      Cat_walk_14: -793843534
-      Cat_walk_15: 1178452130
-      Cat_walk_16: 263901589
-      Cat_walk_17: -766668844
-      Cat_walk_18: 344869667
-      Cat_walk_19: 2093262559
-      Cat_walk_2: -266770432
-      Cat_walk_20: -612926777
-      Cat_walk_21: -1890606364
-      Cat_walk_22: -450814181
-      Cat_walk_23: -1570327781
-      Cat_walk_24: 434268062
-      Cat_walk_25: -381925587
-      Cat_walk_26: 1822139340
-      Cat_walk_27: -1094245401
-      Cat_walk_28: 168472393
-      Cat_walk_29: -1729294415
-      Cat_walk_3: -665873327
-      Cat_walk_30: 179145173
-      Cat_walk_31: 1729883857
-      Cat_walk_4: -1659668640
-      Cat_walk_5: 2132254716
-      Cat_walk_6: 156223499
-      Cat_walk_7: 1899843707
-      Cat_walk_8: -1416862591
-      Cat_walk_9: 318745330
+      crawler_move_0: -85881740
+      crawler_move_1: 1378711811
+      crawler_move_10: -327817001
+      crawler_move_11: -1597466605
+      crawler_move_12: 1800039607
+      crawler_move_13: -1672815284
+      crawler_move_14: -2040897264
+      crawler_move_15: -736383125
+      crawler_move_16: -709084899
+      crawler_move_17: 1820562796
+      crawler_move_18: -469965189
+      crawler_move_19: -926551291
+      crawler_move_2: -196529178
+      crawler_move_20: -1608878344
+      crawler_move_21: -1812589015
+      crawler_move_22: -2048550857
+      crawler_move_23: 1949783474
+      crawler_move_24: -425571340
+      crawler_move_25: -140353893
+      crawler_move_26: -1269571914
+      crawler_move_27: 475149672
+      crawler_move_28: -684047690
+      crawler_move_29: -1878431083
+      crawler_move_3: -721365474
+      crawler_move_30: 872201474
+      crawler_move_31: 2025323476
+      crawler_move_4: -1943082017
+      crawler_move_5: 2019135988
+      crawler_move_6: -1072000362
+      crawler_move_7: -1366796658
+      crawler_move_8: 1730856989
+      crawler_move_9: 376207473
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
