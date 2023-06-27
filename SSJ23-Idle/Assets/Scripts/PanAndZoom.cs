@@ -31,7 +31,7 @@ public class PanAndZoom : MonoBehaviour
 
         void Start()
         {
-            m_InitialCameraPosition = virtualCamera.transform.position;
+            m_InitialCameraPosition = FollowTransform.position;
         }
 
 
