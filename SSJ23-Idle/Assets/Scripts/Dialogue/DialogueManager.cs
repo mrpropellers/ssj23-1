@@ -5,6 +5,7 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.InputSystem;
 using System;
+using System.Diagnostics;
 //using Ink.Parsed;
 
 namespace LeftOut.GameJam.Dialogue
@@ -35,7 +36,7 @@ namespace LeftOut.GameJam.Dialogue
         {
             if (instance != null)
             {
-                Debug.LogWarning("Found more than one dialogue manager in the scene.");
+                UnityEngine.Debug.LogWarning("Found more than one dialogue manager in the scene.");
             }
             instance = this;
         }
@@ -58,15 +59,14 @@ namespace LeftOut.GameJam.Dialogue
             }
         }
 
-        public void EnterDialogueMode(TextAsset inkJSON,string npcDialogue) 
+        public void EnterDialogueMode(TextAsset inkJSON,string npcSpeakingName,string npcCurrentKnot) 
         {
             currentStory = new Story(inkJSON.text); //generate the inky story object
-            npcObject = GameObject.Find(npcDialogue); //find the NPC object that triggered the dialogue
-
+            npcObject = GameObject.Find(npcSpeakingName); //find the NPC object that triggered the dialogue
             //if currentStoryKnot is NOT the greeting knot, then load where the player last left off.
-            if (npcObject.GetComponent<DialogueTrigger>().currentStoryKnot != "Greet") 
+            if (npcCurrentKnot != "Greet") 
             { 
-                currentStory.ChoosePathString(npcObject.GetComponent<DialogueTrigger>().currentStoryKnot);
+                currentStory.ChoosePathString(npcCurrentKnot);
             }
             
             dialogueIsPlaying = true;
@@ -98,7 +98,7 @@ namespace LeftOut.GameJam.Dialogue
                 
                 //immediately after story has continued, update the currentStoryKnot by pulling the variable from the ink.
                 //this allows us to direct the flow of the story within the ink while saving the future story reference point on the npc object
-                npcObject.GetComponent<DialogueTrigger>().currentStoryKnot = currentStory.variablesState["currentStoryKnot"].ToString();
+                //npcObject.GetComponent<Spirit>().currentStoryKnot = currentStory.variablesState["currentStoryKnot"].ToString();
                 
                 //display choices if they exist
                 DisplayChoices();
@@ -130,7 +130,7 @@ namespace LeftOut.GameJam.Dialogue
 
             if(currentChoices.Count > choices.Length)
             {
-                Debug.LogError("More choices than UI Can support.");
+                UnityEngine.Debug.LogError("More choices than UI Can support.");
             }
 
             //turn off the continue button if there are choices to display

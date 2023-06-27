@@ -3,6 +3,8 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
+namespace LeftOut.GameJam.NonPlayerCharacters
+{
 public class Spirit : MonoBehaviour
 {
 
@@ -25,27 +27,30 @@ public class Spirit : MonoBehaviour
     [SerializeField] public bool spiritHasSpoken;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        this.gameObject.SetActive(false);
-        this.isInScene = false;
-        this.spiritHasSpoken = false;
-        dialogue_indicator.SetActive(false);
+        gameObject.SetActive(false);
+        isInScene = false;
         spiritHasSpoken = false;
+        dialogue_indicator.SetActive(false);
+        spiritHasSpoken = true;
         currentStoryKnot = "Greet";
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        private void Update()
+        {
+            if(isInScene == true && spiritHasSpoken == true) { 
+                dialogue_indicator.SetActive(false);
+            } else
+            {
+                dialogue_indicator.SetActive(true);
+            }
+        }
 
-    void OnMouseUp()
+        void OnMouseUp()
     {
-        // TODO: Replace with interaction handling
         SpiritVocalized?.Invoke(SpiritVoiceType);
-        if (!DialogueManager.GetInstance().dialogueIsPlaying)
+        if (!SpiritDialogueManager.GetInstance().dialogueIsPlaying && spiritHasSpoken == false)
         {
             //if currentStoryKnot is THE_END then don't let the player continue the story.
             //this is where we should if the "stop" variable has been reset. 
@@ -54,11 +59,12 @@ public class Spirit : MonoBehaviour
                 Debug.Log(this.name);
                 dialogue_indicator.SetActive(false);
                 Debug.Log("Dialogue Triggered");
-                Debug.Log(inkJSON.ToString());
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON, this.name);
-                this.spiritHasSpoken = false;
+                spiritHasSpoken = true;
+                SpiritDialogueManager.GetInstance().EnterDialogueMode(inkJSON, this.name, currentStoryKnot);
+                
             }
         }
 
     }
+}
 }
