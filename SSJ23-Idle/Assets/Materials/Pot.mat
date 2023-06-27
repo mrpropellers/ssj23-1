@@ -1,21 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7328290209643133848
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 13
-  hdPluginSubTargetMaterialVersions:
-    m_Keys: []
-    m_Values: 
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -23,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Rock
-  m_Shader: {fileID: -6465566751694194690, guid: 2b54d2c0da7cb37478d1e6a6f0971afc, type: 3}
+  m_Name: Pot
+  m_Shader: {fileID: -6465566751694194690, guid: c2b619156036b4241b60884cfe18a089, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -104,15 +88,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2DLOD_1f3d59705b984778b8b1b8857cdadc20_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 0e17830d6c4bc2442973dc6747fbd87e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 24fa804c9683e6246b696a66e37ef4ec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_40ab5a800c744ab895bea9d179bbe899_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 76146b341e873af42b51ea517c4327ac, type: 3}
+        m_Texture: {fileID: 2800000, guid: c19b3b9e84dcc6946a6844a748b2500e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_b764b01553ff474fa8a38ac032ba0767_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 6bc7c97f09114a0499767c8b5b662129, type: 3}
+        m_Texture: {fileID: 2800000, guid: 445f70edb1ea109458f15d2293763d54, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
@@ -233,7 +217,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
-    - _Rotation: 2.85
+    - _Rotation: 3.66
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -293,12 +277,28 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _Max_Displacement: {r: 0.3, g: 0.3, b: 0.3, a: 0}
+    - _Max_Displacement: {r: 0.1, g: 0.1, b: 0.1, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
-    - _UV_Scaling: {r: 3, g: 3, b: 0, a: 0}
+    - _UV_Scaling: {r: 2, g: 2, b: 0, a: 0}
   m_BuildTextureStacks: []
+--- !u!114 &3109295156211452444
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 

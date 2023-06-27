@@ -218,7 +218,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
-    - _Rotation: 3.62
+    - _Rotation: 2.17
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -285,7 +285,7 @@ Material:
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
-    - _UV_Scaling: {r: 0.47, g: 0.81, b: 0, a: 0}
+    - _UV_Scaling: {r: 1.57, g: 1.77, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5960939846902963801
 MonoBehaviour:

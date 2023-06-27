@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7328290209643133848
+--- !u!114 &-7041819963323819498
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23,8 +23,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Rock
-  m_Shader: {fileID: -6465566751694194690, guid: 2b54d2c0da7cb37478d1e6a6f0971afc, type: 3}
+  m_Name: Dirt
+  m_Shader: {fileID: -6465566751694194690, guid: e488acaafcefeeb49a58ba7dbf76bcaa, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -104,15 +104,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2DLOD_1f3d59705b984778b8b1b8857cdadc20_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 0e17830d6c4bc2442973dc6747fbd87e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 207fec56a02bf9242b5d6b2561af7dbe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_40ab5a800c744ab895bea9d179bbe899_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 76146b341e873af42b51ea517c4327ac, type: 3}
+        m_Texture: {fileID: 2800000, guid: 18b4944cca3b92a498e8f2a7c1d9b1a6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_b764b01553ff474fa8a38ac032ba0767_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 6bc7c97f09114a0499767c8b5b662129, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8c8112593543db74fa609706fa550725, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
@@ -293,12 +293,12 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _Max_Displacement: {r: 0.3, g: 0.3, b: 0.3, a: 0}
+    - _Max_Displacement: {r: 0.13, g: 5.8, b: 4.23, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
-    - _UV_Scaling: {r: 3, g: 3, b: 0, a: 0}
+    - _UV_Scaling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
