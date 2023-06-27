@@ -115,6 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3429741985432426778}
+  - component: {fileID: 1205858932669646964}
   m_Layer: 0
   m_Name: SpiritManager
   m_TagString: Untagged
@@ -137,5 +138,17 @@ Transform:
   - {fileID: 8291415756833898451}
   - {fileID: 3571137727369503429}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1205858932669646964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8280983097595843601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c19de7a9ccbd947b8e9e9603d7b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

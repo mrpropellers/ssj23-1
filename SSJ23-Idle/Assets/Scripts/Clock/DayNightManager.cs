@@ -28,7 +28,7 @@ namespace LeftOut.GameJam.Clock
 
         void Update()
         {
-            if (!Timer.IsPlaying)
+            if (!PomoTimer.IsPlaying)
             {
                 return;
             }
@@ -40,11 +40,11 @@ namespace LeftOut.GameJam.Clock
             // This is a 0-1 value that indicates progress through the session
             // 0 => session just started
             // 1 => session is ending
-            var progress = Timer.ProgressThroughSession;
+            var progress = PomoTimer.ProgressThroughSession;
             // This is an enum that tells you what type of session the user is currently doing
             // Right now we can just assume if they're focusing, it's daytime, and breaks happen at night
             // Add phase offset if it's nighttime
-            var session = Timer.currentSessionType;
+            var session = PomoTimer.currentSessionType;
             if (session == SessionType.Focus)
             {
                 m_Sun.color = m_SunColorGradient.Evaluate(progress);

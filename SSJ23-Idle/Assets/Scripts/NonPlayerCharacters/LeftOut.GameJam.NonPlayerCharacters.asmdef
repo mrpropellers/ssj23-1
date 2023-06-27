@@ -2,7 +2,10 @@
     "name": "LeftOut.GameJam.NonPlayerCharacters",
     "rootNamespace": "LeftOut.GameJam.NonPlayerCharacters",
     "references": [
-        "GUID:517d68e952e134045810d1ed7411423b"
+        "GUID:517d68e952e134045810d1ed7411423b",
+        "GUID:da964ca47a252e343a11768145c95a96",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:b2cc2ed7a1ad9f042b49790505e1c680"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

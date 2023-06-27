@@ -106,12 +106,12 @@ namespace LeftOut.GameJam.Bonsai
             m_SproutGrowthRate = 1.0 / NewSproutDuration;
             m_HasSproutedInitialBranches = false;
 
-            if (Timer.Exists)
+            if (PomoTimer.Exists)
             {
                 m_GrowthTargets = GrowthTargets.PreGameSprouting;
-                Timer.Pause();
-                Timer.Instance.SessionStarted.AddListener(OnSessionStart);
-                Timer.Instance.SessionEnded.AddListener(OnSessionEnd);
+                PomoTimer.Pause();
+                PomoTimer.Instance.SessionStarted.AddListener(OnSessionStart);
+                PomoTimer.Instance.SessionEnded.AddListener(OnSessionEnd);
                 Trunks[0].SetGrowthTarget(m_StartingTrunkProgress);
                 m_ActiveGrowth.Add(Trunks[0]);
             }
@@ -178,7 +178,7 @@ namespace LeftOut.GameJam.Bonsai
             return m_GrowthTargets switch
             {
                 GrowthTargets.None => 1f,
-                GrowthTargets.ExistingLimbs => Timer.Exists ? Timer.ProgressThroughSession : 1f,
+                GrowthTargets.ExistingLimbs => PomoTimer.Exists ? PomoTimer.ProgressThroughSession : 1f,
                 GrowthTargets.PreGameSprouting => ProgressThroughSproutInterval,
                 GrowthTargets.NewSprouts => ProgressThroughSproutInterval,
                 _ => throw new ArgumentOutOfRangeException($"No handling for {m_GrowthTargets}")

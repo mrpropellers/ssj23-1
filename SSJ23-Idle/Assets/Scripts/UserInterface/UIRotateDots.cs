@@ -7,7 +7,7 @@ namespace LeftOut.GameJam.UserInterface
     public class UIRotateDots : MonoBehaviour
     {
         [SerializeField] float rotationSpeed = 5.0f;
-        bool spin => Timer.IsPlaying;
+        bool spin => PomoTimer.IsPlaying;
 
         // Update is called once per frame
         void Update()

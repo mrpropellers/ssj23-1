@@ -9,7 +9,7 @@ namespace LeftOut.GameJam.UserInterface
     {
         public TextMeshProUGUI timerText; // Reference to the UI text component
 
-        float currentTime => Timer.Exists ? Timer.CurrentTime : 0f;
+        float currentTime => PomoTimer.Exists ? PomoTimer.CurrentTime : 0f;
 
         private void Start()
         {
