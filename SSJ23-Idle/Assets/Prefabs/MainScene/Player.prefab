@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7130337006525946369}
   - component: {fileID: 3805939502818007199}
   - component: {fileID: 1674115441006323112}
-  - component: {fileID: 8780169949825609243}
   - component: {fileID: 4390742449223812254}
+  - component: {fileID: 3121996352101986467}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   - {fileID: 8891366621182055187}
   - {fileID: 3422411440759853608}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3805939502818007199
 MonoBehaviour:
@@ -96,6 +96,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 72c1145d-0c95-4f7a-b4e8-151053b24273
     m_ActionName: Game/New action
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 53171eec-4e1c-44ff-9680-8dbe0a46c65b
+    m_ActionName: Game/Zoom[/Mouse/scroll/y]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d3990842-50de-4a67-926c-229fb828d363
+    m_ActionName: Game/Pan[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game
@@ -120,21 +128,6 @@ MonoBehaviour:
   <RaycastHitEvent>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8780169949825609243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2270947654428232932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!114 &4390742449223812254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +158,21 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!114 &3121996352101986467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2270947654428232932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &2354663362369423650
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2354663362369423650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.422575, y: 2.79, z: -20.04}
+  m_LocalPosition: {x: -8.7, y: 4.86, z: -19.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -219,9 +227,9 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 3422411440759853608}
   m_Lens:
-    FieldOfView: 67.6151
+    FieldOfView: 70
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -260,8 +268,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerIndex: -1
   AutoEnableInputs: 1
-  XYAxis: {fileID: -8715607921593479123, guid: 19f27a5c81e231249996c16528d07117, type: 3}
-  ZAxis: {fileID: -3747912630592531670, guid: 19f27a5c81e231249996c16528d07117, type: 3}
+  XYAxis: {fileID: -3067038607245154207, guid: 257dafe642658c64b819f53b3ab75aa2, type: 3}
+  ZAxis: {fileID: -4736479022407697579, guid: 257dafe642658c64b819f53b3ab75aa2, type: 3}
 --- !u!114 &4388178935251866511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,11 +282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7b494f02348194c9d37496d70c9797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxPanDistance: 0.5
+  m_MaxPanDistance: 2.5
   panSpeed: 6
   zoomSpeed: 15
   zoomInMax: 20
   zoomOutMax: 70
+  FollowTransform: {fileID: 3422411440759853608}
 --- !u!1 &4018255423738022216
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4018255423738022216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -9.2, y: 4.86, z: -17.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -320,6 +329,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1204951501693822706}
   - component: {fileID: 9064904072348757723}
+  - component: {fileID: 4590177648343615864}
+  - component: {fileID: 7991646185050287371}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -354,6 +365,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4590177648343615864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4030594355139292701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damping: {x: 1.5, y: 1.5, z: 0.3}
+  ShoulderOffset: {x: 0.5, y: -0.4, z: 0}
+  VerticalArmLength: 0.4
+  CameraSide: 1
+  CameraDistance: 2
+  CameraCollisionFilter:
+    serializedVersion: 2
+    m_Bits: 0
+  IgnoreTag: 
+  CameraRadius: 0.2
+  DampingIntoCollision: 0
+  DampingFromCollision: 2
+--- !u!114 &7991646185050287371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4030594355139292701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0.35
+  m_FrequencyGain: 0.25
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &7084950660253995620
 GameObject:
   m_ObjectHideFlags: 0
