@@ -24,7 +24,7 @@ namespace LeftOut.GameJam.UserInterface
 
         void Start()
         {
-            if (!Timer.Exists)
+            if (!PomoTimer.Exists)
             {
                 Debug.LogWarning("Couldn't find a Timer to check - disabling self.");
                 enabled = false;
@@ -34,11 +34,11 @@ namespace LeftOut.GameJam.UserInterface
         void Update()
         {
 
-            if (Timer.IsPlaying && m_CurrentIndex == 0) 
+            if (PomoTimer.IsPlaying && m_CurrentIndex == 0) 
             {
                 SetSprite(1);
             }
-            else if (!Timer.IsPlaying && m_CurrentIndex == 1)
+            else if (!PomoTimer.IsPlaying && m_CurrentIndex == 1)
             {
                 SetSprite(0);
             }

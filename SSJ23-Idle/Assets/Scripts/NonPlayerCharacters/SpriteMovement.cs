@@ -10,10 +10,12 @@ public class SpriteMovement : MonoBehaviour{
     public float amplitude;
 
     public Vector3 tempPosition;
+    public Vector2 originalPosition;
     
     // Start is called before the first frame update
     void Start()
     {
+        originalPosition = transform.position;
         tempPosition = transform.position;
     }
 
@@ -22,6 +24,8 @@ public class SpriteMovement : MonoBehaviour{
     {
         tempPosition.x = Mathf.Cos(Time.time * horizontalSpeed) * amplitude;
         tempPosition.y = Mathf.Sin(Time.time * verticalSpeed) * amplitude;
+
+        tempPosition += (Vector3)originalPosition;
 
         var direction = tempPosition - transform.position;
         var rotateDir = Quaternion.LookRotation(Vector3.forward, direction);

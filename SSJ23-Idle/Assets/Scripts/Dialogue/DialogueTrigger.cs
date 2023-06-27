@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LeftOut.GameJam
+namespace LeftOut.GameJam.Dialogue
 {
     public class DialogueTrigger : MonoBehaviour
     {
@@ -14,7 +14,7 @@ namespace LeftOut.GameJam
         [SerializeField] private TextAsset inkJSON;
         public string currentStoryKnot;
 
-        private void OnMouseDown()
+        private void OnMouseUp()
         {
             if (!DialogueManager.GetInstance().dialogueIsPlaying)
             {
@@ -27,12 +27,14 @@ namespace LeftOut.GameJam
                     Debug.Log("Dialogue Triggered");
                     Debug.Log(inkJSON.ToString());
                     DialogueManager.GetInstance().EnterDialogueMode(inkJSON, this.name);
+                   // this.spiritHasSpoken = false;
                 }
             }
         }
         private void Awake()
         {
-            dialogue_indicator.SetActive(true);
+            dialogue_indicator.SetActive(false);
+           // spiritHasSpoken = false;
             currentStoryKnot = "Greet";
 
         }

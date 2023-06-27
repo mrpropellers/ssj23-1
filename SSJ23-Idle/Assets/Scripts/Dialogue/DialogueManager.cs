@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 using System;
 //using Ink.Parsed;
 
-namespace LeftOut.GameJam
+namespace LeftOut.GameJam.Dialogue
 {
     public class DialogueManager : MonoBehaviour
     {
