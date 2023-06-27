@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpriteMovement : MonoBehaviour{
+public class SpriteMovement : MonoBehaviour
+{
 
+    [SerializeField]
+    bool m_ShouldTilt = true;
+    
     public float horizontalSpeed;
     public float verticalSpeed;
     public float rotationSpeed;
@@ -28,11 +32,16 @@ public class SpriteMovement : MonoBehaviour{
         tempPosition += (Vector3)originalPosition;
 
         var direction = tempPosition - transform.position;
-        var rotateDir = Quaternion.LookRotation(Vector3.forward, direction);
+        transform.position = tempPosition;
 
+        if (!m_ShouldTilt)
+        {
+            return;
+        }
+        
+        var rotateDir = Quaternion.LookRotation(Vector3.forward, direction);
         var zRot = rotateDir.eulerAngles.z;
         zRot = Mathf.Clamp(zRot, -45, 45);
-
         if((tempPosition.x - transform.position.x) == Mathf.Abs(tempPosition.x - transform.position.x)){
             zRot = zRot * -1;
         }
@@ -44,6 +53,5 @@ public class SpriteMovement : MonoBehaviour{
         var finalRotation = Quaternion.Euler(0, 0, zRot);
 
         transform.rotation = Quaternion.Lerp(transform.rotation, finalRotation, rotationSpeed);
-        transform.position = tempPosition;
     }
 }

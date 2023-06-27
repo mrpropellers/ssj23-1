@@ -3,9 +3,14 @@ guid: ebdb9a9c06954284a9dcea8d2117e385
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ceramic Grad Blue
+    second: {fileID: 2100000, guid: 42387f727c156dd458fa5977fb772692, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
