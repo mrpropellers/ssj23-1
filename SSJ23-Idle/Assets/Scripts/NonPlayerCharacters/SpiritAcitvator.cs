@@ -2,12 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using LeftOut.GameJam.Clock;
 using System;
+using System.Linq;
 
 namespace LeftOut.GameJam.NonPlayerCharacters
 {
     public class SpiritActivator : MonoBehaviour
     {
         [SerializeField] private List<Spirit> spirits;
+
+        public int NumActiveSpirits => spirits.Count(s => s.isInScene);
+        
         // Start is called before the first frame update
         public void ActivateSpirits()
         {

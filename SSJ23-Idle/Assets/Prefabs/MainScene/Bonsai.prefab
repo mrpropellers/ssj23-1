@@ -546,6 +546,7 @@ GameObject:
   - component: {fileID: 1699781824381274358}
   - component: {fileID: 3163874209067906371}
   - component: {fileID: 3797026989431144212}
+  - component: {fileID: 3396355385776826115}
   m_Layer: 0
   m_Name: Bonsai
   m_TagString: Untagged
@@ -613,7 +614,19 @@ MonoBehaviour:
   <NewSproutStartingProgress>k__BackingField: 0.4
   <NewBranchesSprouted>k__BackingField:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3396355385776826115}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   <BranchGrowthStarted>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
@@ -621,6 +634,37 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_StartingTrunkProgress: 0.6
+--- !u!114 &3396355385776826115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501714961788776454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -955076572
+      Data2: 1312441281
+      Data3: 953825419
+      Data4: -298689900
+    Path: event:/Leaves Sprout
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &2396637050091900925
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -491,6 +491,7 @@ GameObject:
   - component: {fileID: 6803912289713347878}
   - component: {fileID: 5922325952954213395}
   - component: {fileID: 4628660535352311830}
+  - component: {fileID: 9030280076302575868}
   m_Layer: 0
   m_Name: GameInteractions
   m_TagString: Untagged
@@ -528,6 +529,21 @@ MonoBehaviour:
   CursorDefault: {fileID: 2800000, guid: 91107b5d5ef8e6440be594489a686d14, type: 3}
   CursorPrune: {fileID: 2800000, guid: 0133fc1faceb45c4a8c0c3ec9fdaca87, type: 3}
   m_Raycaster: {fileID: 1674115441006323112}
+  <PruneBranch>k__BackingField:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9030280076302575868}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4628660535352311830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,3 +557,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ModeOverride: 0
+--- !u!114 &9030280076302575868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7084950660253995620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1873385165
+      Data2: 1188403958
+      Data3: 488517543
+      Data4: 1767684331
+    Path: event:/Prune
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

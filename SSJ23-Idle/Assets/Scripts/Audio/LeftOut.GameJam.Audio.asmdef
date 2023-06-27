@@ -1,0 +1,19 @@
+{
+    "name": "LeftOut.GameJam.Audio",
+    "rootNamespace": "LeftOut.GameJam.Audio",
+    "references": [
+        "GUID:0c752da273b17c547ae705acf0f2adf2",
+        "GUID:517d68e952e134045810d1ed7411423b",
+        "GUID:da964ca47a252e343a11768145c95a96",
+        "GUID:110fdfbe5f75a5f4d9d4073150307caa"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

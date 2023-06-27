@@ -26,6 +26,8 @@ namespace LeftOut.GameJam.Clock
         bool PauseBetweenSessions = true;
         [SerializeField]
         TimerSettings DefaultSettings;
+        [SerializeField, Range(0.2f, 0.8f)]
+        float m_FastForwardMultiplier;
         [field: SerializeField]
         public UnityEvent<SessionType> SessionStarted { get; private set; }
         [field: SerializeField]
@@ -147,7 +149,7 @@ namespace LeftOut.GameJam.Clock
                 Play();
             }
 
-            m_TimerTimeScale = Mathf.Max(CurrentTime * 0.4f, 10f);
+            m_TimerTimeScale = Mathf.Max(CurrentTime * m_FastForwardMultiplier, 10f);
         }
         
         void Initialize_impl(TimerSettings settings)
