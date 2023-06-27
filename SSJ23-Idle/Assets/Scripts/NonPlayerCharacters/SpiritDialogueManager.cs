@@ -1,16 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; 
+using TMPro;
 using Ink.Runtime;
-using UnityEngine.InputSystem;
-using System;
-using System.Diagnostics;
+
 //using Ink.Parsed;
 
-namespace LeftOut.GameJam.Dialogue
+namespace LeftOut.GameJam.NonPlayerCharacters
 {
-    public class DialogueManager : MonoBehaviour
+    public class SpiritDialogueManager : MonoBehaviour
     {
         [Header("Dialogue UI")]
         [SerializeField] private GameObject dialoguePanel;
@@ -27,11 +24,11 @@ namespace LeftOut.GameJam.Dialogue
 
         private Story currentStory;
 
-        private static DialogueManager instance;
+        private static SpiritDialogueManager instance;
 
         private GameObject npcObject;
 
-        public bool dialogueIsPlaying {  get; private set; }
+        public bool dialogueIsPlaying { get; private set; }
         private void Awake()
         {
             if (instance != null)
@@ -59,16 +56,16 @@ namespace LeftOut.GameJam.Dialogue
             }
         }
 
-        public void EnterDialogueMode(TextAsset inkJSON,string npcSpeakingName,string npcCurrentKnot) 
+        public void EnterDialogueMode(TextAsset inkJSON, string npcSpeakingName, string npcCurrentKnot)
         {
             currentStory = new Story(inkJSON.text); //generate the inky story object
             npcObject = GameObject.Find(npcSpeakingName); //find the NPC object that triggered the dialogue
             //if currentStoryKnot is NOT the greeting knot, then load where the player last left off.
-            if (npcCurrentKnot != "Greet") 
-            { 
+            if (npcCurrentKnot != "Greet")
+            {
                 currentStory.ChoosePathString(npcCurrentKnot);
             }
-            
+
             dialogueIsPlaying = true;
             dialoguePanel.SetActive(true);
             continueStoryButton.SetActive(true);
@@ -80,9 +77,9 @@ namespace LeftOut.GameJam.Dialogue
         {
             //return immediately if no dialogue is playing
             if (!dialogueIsPlaying) { return; }
-            if(continueStoryTracker.activeSelf == true || makingChoices == true)
+            if (continueStoryTracker.activeSelf == true || makingChoices == true)
             {
-               continueStoryTracker.SetActive(false);
+                continueStoryTracker.SetActive(false);
                 ContinueStory();
             }
 
@@ -93,13 +90,13 @@ namespace LeftOut.GameJam.Dialogue
 
             if (currentStory.canContinue)
             {
- 
+
                 dialogueText.text = currentStory.Continue();
-                
+
                 //immediately after story has continued, update the currentStoryKnot by pulling the variable from the ink.
                 //this allows us to direct the flow of the story within the ink while saving the future story reference point on the npc object
-                //npcObject.GetComponent<Spirit>().currentStoryKnot = currentStory.variablesState["currentStoryKnot"].ToString();
-                
+                npcObject.GetComponent<Spirit>().currentStoryKnot = currentStory.variablesState["currentStoryKnot"].ToString();
+
                 //display choices if they exist
                 DisplayChoices();
             }
@@ -112,7 +109,7 @@ namespace LeftOut.GameJam.Dialogue
         private void ExitDialogueMode()
         {
             //turn on the dialogue indicator if there's more dialogue for that NPC
-            if (npcObject.GetComponent<DialogueTrigger>().currentStoryKnot != "THE_END") { reactivateDialogueIndicator(); }
+            if (npcObject.GetComponent<Spirit>().currentStoryKnot != "THE_END") { reactivateDialogueIndicator(); }
 
             //clean up the dialogue box
             makingChoices = false;
@@ -122,25 +119,25 @@ namespace LeftOut.GameJam.Dialogue
 
         }
 
-        public static DialogueManager GetInstance() { return instance; }
+        public static SpiritDialogueManager GetInstance() { return instance; }
 
         private void DisplayChoices()
         {
             List<Choice> currentChoices = currentStory.currentChoices;
 
-            if(currentChoices.Count > choices.Length)
+            if (currentChoices.Count > choices.Length)
             {
                 UnityEngine.Debug.LogError("More choices than UI Can support.");
             }
 
             //turn off the continue button if there are choices to display
-            
-            if(currentChoices.Count > 0)
+
+            if (currentChoices.Count > 0)
             {
-                makingChoices=true;
+                makingChoices = true;
                 continueStoryButton.SetActive(false);
             }
-            
+
             int index = 0;
             foreach (Choice choice in currentChoices)
             {
@@ -153,7 +150,7 @@ namespace LeftOut.GameJam.Dialogue
                 choices[i].gameObject.SetActive(false);
             }
             makingChoices = false;
-           
+
         }
         private void reactivateDialogueIndicator()
         {
@@ -166,7 +163,8 @@ namespace LeftOut.GameJam.Dialogue
             currentStory.ChooseChoiceIndex(buttonChoiceIndex);
             continueStoryButton.SetActive(true);
             ContinueStory();
-            
+
         }
     }
 }
+

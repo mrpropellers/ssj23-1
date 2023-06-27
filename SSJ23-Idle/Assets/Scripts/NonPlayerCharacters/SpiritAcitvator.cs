@@ -9,6 +9,7 @@ using UnityEditor;
 //using Random = Unity.Mathematics;
 using System;
 using LeftOut.GameJam.Dialogue;
+using System.Diagnostics;
 
 namespace LeftOut.GameJam.NonPlayerCharacters
 {
@@ -26,7 +27,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
                 }
             }
 
-            Debug.Log("Spirits have been activated");
+            UnityEngine.Debug.Log("Spirits have been activated");
             //get the spirts and then activate them
         }
 
@@ -40,7 +41,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
             {
                 if (spirit.isInScene == false) { m_spirits.Add(spirit); }
             }
-
+            UnityEngine.Debug.Log(m_spirits.ToString());
             //if there's at least one spirit on that list, pick one at random and then add then flag it as in scene
             if (m_spirits.Count > 0)
             {
@@ -54,9 +55,9 @@ namespace LeftOut.GameJam.NonPlayerCharacters
         {
             foreach (Spirit spirit in spirits)
             {
-                Debug.Log(spirit.transform.GetChild(0).name);
-                Debug.Log("Child spirit name above.");
-                spirit.transform.GetChild(0).gameObject.SetActive(false);
+                UnityEngine.Debug.Log(spirit.transform.GetChild(1).name);
+                UnityEngine.Debug.Log("Child spirit name above.");
+                spirit.transform.GetChild(1).gameObject.SetActive(false);
             }
 
         }
@@ -72,23 +73,23 @@ namespace LeftOut.GameJam.NonPlayerCharacters
 
         void OnSessionStarted(SessionType sessionTypeStarted)
         {
-            Debug.Log("OnSessionStarted Called");
-            Debug.Log(sessionTypeStarted);
+            UnityEngine.Debug.Log("OnSessionStarted Called");
+            UnityEngine.Debug.Log(sessionTypeStarted);
             switch(sessionTypeStarted)
             {
                 case SessionType.ShortBreak:
-                    Debug.Log("Short break! Let's wake up some SPIRITS");
+                    UnityEngine.Debug.Log("Short break! Let's wake up some SPIRITS");
                     ActivateSpirits();
                     break;
 
                 case SessionType.LongBreak:
-                    Debug.Log("Long break! Make a new spirit and wake up some little ones!");
+                    UnityEngine.Debug.Log("Long break! Make a new spirit and wake up some little ones!");
                     ActivateNewSpirit();
                     ActivateSpirits();
                     break;
 
                 case SessionType.Focus:
-                    Debug.Log("Daylight is here hide them spirits!");
+                    UnityEngine.Debug.Log("Daylight is here hide them spirits!");
                     DeactivateSpirits();
                     break;
                 

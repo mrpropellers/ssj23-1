@@ -26,7 +26,7 @@ namespace LeftOut.GameJam.Dialogue
                     dialogue_indicator.SetActive(false);
                     Debug.Log("Dialogue Triggered");
                     Debug.Log(inkJSON.ToString());
-                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON, this.name);
+                   // DialogueManager.GetInstance().EnterDialogueMode(inkJSON, this.name);
                    // this.spiritHasSpoken = false;
                 }
             }

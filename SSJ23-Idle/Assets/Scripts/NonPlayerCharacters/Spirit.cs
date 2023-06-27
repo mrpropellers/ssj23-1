@@ -3,6 +3,8 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
+namespace LeftOut.GameJam.NonPlayerCharacters
+{
 public class Spirit : MonoBehaviour
 {
 
@@ -25,27 +27,20 @@ public class Spirit : MonoBehaviour
     [SerializeField] public bool spiritHasSpoken;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        this.gameObject.SetActive(false);
-        this.isInScene = false;
-        this.spiritHasSpoken = false;
+        gameObject.SetActive(false);
+        isInScene = false;
+        spiritHasSpoken = false;
         dialogue_indicator.SetActive(false);
         spiritHasSpoken = false;
         currentStoryKnot = "Greet";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    }   
 
     void OnMouseUp()
     {
-        // TODO: Replace with interaction handling
         SpiritVocalized?.Invoke(SpiritVoiceType);
-        if (!DialogueManager.GetInstance().dialogueIsPlaying)
+        if (!SpiritDialogueManager.GetInstance().dialogueIsPlaying)
         {
             //if currentStoryKnot is THE_END then don't let the player continue the story.
             //this is where we should if the "stop" variable has been reset. 
@@ -55,10 +50,11 @@ public class Spirit : MonoBehaviour
                 dialogue_indicator.SetActive(false);
                 Debug.Log("Dialogue Triggered");
                 Debug.Log(inkJSON.ToString());
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON, this.name);
-                this.spiritHasSpoken = false;
+                SpiritDialogueManager.GetInstance().EnterDialogueMode(inkJSON, this.name, currentStoryKnot);
+                spiritHasSpoken = false;
             }
         }
 
     }
+}
 }
