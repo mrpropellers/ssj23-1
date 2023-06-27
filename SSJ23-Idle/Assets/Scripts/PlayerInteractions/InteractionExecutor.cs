@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using UnityEngine.Events;
 
 namespace LeftOut.GameJam.PlayerInteractions
 {
@@ -20,6 +21,10 @@ namespace LeftOut.GameJam.PlayerInteractions
 
         [SerializeField]
         CursorRaycaster m_Raycaster;
+
+
+        [field: SerializeField]
+        public UnityEvent PruneBranch { get; private set; }
 
         public bool IsInPruneMode => Mode == InteractionMode.Prune;
 
@@ -93,7 +98,10 @@ namespace LeftOut.GameJam.PlayerInteractions
                         TryGetPruneTarget(hit.collider.gameObject, out var limb))
                     {
                         Debug.Log($"Pruning {limb.name}");
+
                         limb.Prune();
+                        PruneBranch?.Invoke();
+                        
                     }
                     break;
                 case (InteractionMode.Select):

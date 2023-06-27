@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b9d640e3-9179-48d3-b9ff-b6d9677ef49e}">
+		<property name="assetPath">
+			<value>SFX/Spirits/Spirit C2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.2546666666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2e249312-c327-4af9-8528-6b7339842ea5}</destination>
+		</relationship>
+	</object>
+</objects>

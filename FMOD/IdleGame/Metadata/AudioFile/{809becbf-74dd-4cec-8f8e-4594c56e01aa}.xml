@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{809becbf-74dd-4cec-8f8e-4594c56e01aa}">
+		<property name="assetPath">
+			<value>SFX/Ambience/Robins/Robins 7.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.8369614512471655</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2e249312-c327-4af9-8528-6b7339842ea5}</destination>
+		</relationship>
+	</object>
+</objects>
