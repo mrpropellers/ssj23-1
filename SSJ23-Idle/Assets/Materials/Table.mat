@@ -300,5 +300,5 @@ Material:
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
-    - _UV_Scaling: {r: 0.35, g: 0.35, b: 0, a: 0}
+    - _UV_Scaling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

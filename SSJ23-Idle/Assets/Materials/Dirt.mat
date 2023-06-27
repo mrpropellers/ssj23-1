@@ -104,15 +104,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2DLOD_1f3d59705b984778b8b1b8857cdadc20_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 4a71fb66b460e2e45ad03cd395d19c4d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 207fec56a02bf9242b5d6b2561af7dbe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_40ab5a800c744ab895bea9d179bbe899_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 9370ba45191892b409b57552a82aa138, type: 3}
+        m_Texture: {fileID: 2800000, guid: 18b4944cca3b92a498e8f2a7c1d9b1a6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_b764b01553ff474fa8a38ac032ba0767_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: a357316909d031647b53bad4575795b0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8c8112593543db74fa609706fa550725, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
@@ -300,5 +300,5 @@ Material:
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
-    - _UV_Scaling: {r: 0.35, g: 0.35, b: 0, a: 0}
+    - _UV_Scaling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
