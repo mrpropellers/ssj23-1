@@ -3,8 +3,14 @@ VAR currentStoryKnot = "Greet"
 This is much nicer than where I was.
 I guess I'll stay here at night from now on.
 ~ currentStoryKnot = "Tip1"
-->DONE
 
+VAR isTutorial = "False"
+INCLUDE UniversalTutorial.Ink
+{ isTutorial == "True":
+~ isTutorial = "False"
+->Tutorial->
+}
+->DONE
 
 ===About1===
 ->Greeting5->
@@ -113,7 +119,7 @@ We spirits rest during the day and hide in the tree. We wouldn't want to distrac
 
 If you don't prune the tree, it will grow too many small branches.
 Each branch takes energy from the tree, so it makes it hard to grow.
-That's why we should be careful not to overextend ourselves.
+In other words, just like people, the tree can overextend itself.
 ~ currentStoryKnot = "Encourage2"
 ->DONE
 
@@ -131,24 +137,62 @@ Other times it just feels overwhelming.
 
 ===Convo1===
 ->Greeting7->
+VAR silence = 0
+I don't have a lot of social energy right now. 
+Want to just sit together for a bit? ->waiting
+=waiting
+    +[Stay and wait.] {...|...|...} 
+        ~ silence += 1
+        {silence >2: 
+        ->silencebroken
+        }
+        ->waiting
+    ->silencebroken
+    *[Get up to go.] ->silenceend
+->DONE
+=silencebroken
+Thank you for staying with me! 
+I feel you can tell a true friend when they're happy to just be near you.
+Some people get antsy when it's when quiet, but companiable silence is comforting to me. 
+I hope you have a great day tomorrow!
+->DONE
 
-I have to be a conservative with my social energy or I get overwhelmed.
+=silenceend
+Thanks for staying awhile! Have a nice day!
+What do you do to get moving?
 ~ currentStoryKnot = "Encourage3"
 ->DONE
 
 
 ===Convo2===
 ->Greeting12->
-
-You have to let people enjoy things.
-~ currentStoryKnot = "About4"
+Can I tell you something?
+Today I saw a person making fun of one of the other spirits for liking books!
+Books!? I know they're a human invention but...
+Well, spirits commune with each other so the activity of reading is seen as... rather eccentric.
+...I just get so angry when people make fun of the things others enjoy.
+    *[People should let people enjoy things!]
+    *[Reading doesn't hurt anyone!]
+        It doesn't! There's no reason to 
+    *[Is it silly for a spirit to read?]
+        I'm assuming you're being sarcastic. I think it's silly for anyone to do most things, to be honest.
+    - ~ currentStoryKnot = "About4"
 ->DONE
 
 
 ===Convo3===
 ->Greeting16->
+Many of the spirits I've met all enjoy being together. Sometimes they gather in flocks! 
+I'm happier with a small handful of friends. Which do you prefer?
+    *[Large groups!]
+        Every now and then I find that thrilling! Parties, crowded places... I've even visited a stadium!
+        But I do get tired quickly. I would get grumpy and I didn't realize I was overstimulated. 
+    *[Small groups.]
+        It took me a long itme to realize that I don't always have energy to be social.
+        If I'm conservative with being around so many people, I enjoy it more when I do.
+    - Just goes to show it's important to take care of yourself by knowing yourself! 
+    Then you can be the best version of you most often.
 
-What do you do to get moving?
 ->DONE
 
 

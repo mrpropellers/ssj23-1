@@ -19,7 +19,6 @@ namespace LeftOut.GameJam.NonPlayerCharacters
         [SerializeField] private GameObject[] choices;
         [SerializeField] private GameObject choiceManager;
         private TextMeshProUGUI[] choicesText;
-        private int choiceIndex;
         private bool makingChoices;
 
         private Story currentStory;
@@ -29,6 +28,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
         private GameObject npcObject;
 
         public bool dialogueIsPlaying { get; private set; }
+        public bool NeedsTutorial;
         private void Awake()
         {
             if (instance != null)
@@ -44,8 +44,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
             makingChoices = false;
             dialoguePanel.SetActive(false);
             continueStoryButton.SetActive(false);
-            //  knotProgress = ["one", "two" ];
-
+            NeedsTutorial = true;
             //get all the choices text
             choicesText = new TextMeshProUGUI[choices.Length];
             int index = 0;
@@ -54,16 +53,25 @@ namespace LeftOut.GameJam.NonPlayerCharacters
                 choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
                 index++;
             }
+
         }
+        
 
         public void EnterDialogueMode(TextAsset inkJSON, string npcSpeakingName, string npcCurrentKnot)
         {
             currentStory = new Story(inkJSON.text); //generate the inky story object
             npcObject = GameObject.Find(npcSpeakingName); //find the NPC object that triggered the dialogue
+
             //if currentStoryKnot is NOT the greeting knot, then load where the player last left off.
             if (npcCurrentKnot != "Greet")
             {
                 currentStory.ChoosePathString(npcCurrentKnot);
+            } 
+            if (NeedsTutorial == true)
+            {
+                UnityEngine.Debug.Log("Calling Tutorial.");
+                currentStory.variablesState["isTutorial"] = "True";
+                NeedsTutorial = false;
             }
 
             dialogueIsPlaying = true;
@@ -167,6 +175,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
             ContinueStory();
 
         }
+
     }
 }
 

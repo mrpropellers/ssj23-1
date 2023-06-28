@@ -3,8 +3,14 @@ VAR currentStoryKnot = "Greet"
 How wonderful! I knew I could sense someone doing fine work!
 I'll be sure to visit each evening. 
 ~ currentStoryKnot = "Tip1"
-->DONE
 
+VAR isTutorial = "False"
+INCLUDE UniversalTutorial.Ink
+{ isTutorial == "True":
+~ isTutorial = "False"
+->Tutorial->
+}
+->DONE
 
 ===About1===
 ->Greeting5->
@@ -139,16 +145,89 @@ Do you have a mentor? Someone who helps you make decisions about your life path?
 
 ===Convo2===
 ->Greeting12->
+VAR workRating = 0
+How is your work going today?
+    *Excellent[!]<>
+        ? That's good to hear. 
+        ~ workRating = 1 
+    *Just fine[.]<>
+        ? Oh my, that doesn't sound promising.
+        ~ workRating = 2
+    *Not well[.]<>
+        ? I'm sorry to hear that. But look at you, pushing through.
+        ~workRating = 3
+    -
+What is it that you're doing?
+    *[Work for my job.] -> job
+    *[Stuff for my hobbies.] ->hobbies
+    *[Chores!] ->chores
 
-Does this make you happy?
+=job
+    {workRating == 1: 
+        Well, that's good to hear. Sometimes work can be such a burden! It's only easier when you've got a good feeling for it!
+    }
+      
+    {workRating == 2: 
+        There's nothing wrong with an average day. I would never say, "It could be worse!" What a useless sentiment!
+    } 
+    {workRating == 3:
+       Oh, my! A tough day doing work for an employer instead if yourself can be extra tiring.
+      I know you can tough it out. 
+    }
+->convo2Finish
+
+=hobbies
+        {workRating == 1:
+            Oh, glorious! To have time to spend on what you love and for it to go well!
+        }
+        {workRating == 2: 
+            Fine? I hope it's not too exhausting, if it's a hobby. Some things bring me joy no matter how poorly they go.
+            Sometimes the things that bring joy are extra disappointing when they don't go well. 
+            Don't lose heart - it will come back around for you!
+        } 
+        {workRating == 3:
+            Oh, how disappointing! 
+            When we love doing something and it goes poorly, it can be extra frustrating.
+            Hang in there! The joy will return!
+        }
+->convo2Finish
+
+=chores
+        {workRating == 1: 
+        Oh, excellent! It's nice to see you taking care of yourself by putting effort into your own situation.
+            Keep it up! You're building your own happiness!
+        }
+        {workRating == 2:
+        I hope it's not too tedious. Don't forget that chores are how you build your own happiness at home.
+        You deserve the results of your work! Keep going!
+        } 
+        {workRating == 3:
+         Oh, no! Chores going poorly can be so discouraging. Remember that, really, you're doing this for you! 
+         Chores are a form of responsible self care, my friend. Keep going! You're building your own happiness!
+        }
+->convo2Finish
+
+=convo2Finish
 ~ currentStoryKnot = "About4"
 ->DONE
 
 
 ===Convo3===
 ->Greeting16->
-
-What would you look back on fondly?
+I've grown quite fond of this tree... these spirits...
+And you! Of course! 
+Do you think you'll look back fondly on all of this?
+    *[Of course!]
+        That is quite kind of you to say, and I do believe you.
+        The say that the biggest indicator of friendship is proximity!
+        You grow closest to the things you spend the most time with.
+        Thank you for spending time here, my friend.
+    *[It would be rude to say otherwise.]
+        Hah! So it would, you rogue! Don't toy with an old spirit's heart like that!
+        The say that the biggest indicator of friendship is proximity!
+        You grow closest to the things you spend the most time with.
+        Thank you for spending time here, my friend.
+        -
 ->DONE
 
 

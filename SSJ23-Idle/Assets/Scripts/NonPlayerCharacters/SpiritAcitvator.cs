@@ -8,24 +8,35 @@ namespace LeftOut.GameJam.NonPlayerCharacters
 {
     public class SpiritActivator : MonoBehaviour
     {
-        [SerializeField] private List<Spirit> spirits;
-
+        [SerializeField] public List<Spirit> spirits;
+        [SerializeField] private bool firstBreak;
         public int NumActiveSpirits => spirits.Count(s => s.isInScene);
-        
-        // Start is called before the first frame update
+
+        void Start()
+        {
+
+            if (PomoTimer.Exists)
+            {
+                PomoTimer.Instance.SessionStarted.AddListener(OnSessionStarted);
+                PomoTimer.Instance.SessionEnded.AddListener(OnSessionEnded);
+                activateFirstSpirit();
+            }
+
+        }
+
         public void ActivateSpirits()
         {
             foreach (Spirit spirit in spirits)
             {
-                if (spirit.isInScene) { 
-                    spirit.gameObject.SetActive(true);
-                    spirit.transform.GetChild(0).gameObject.SetActive(true);
-                    spirit.spiritHasSpoken = false;
+                if (spirit.isInScene) {
+                    spirit.SetSpiriteActiveTo(true);
+                    spirit.SetSpriteActiveTo(true);
+                    spirit.SetSpiritHasSpokenTo(false);
                 }
             }
 
             UnityEngine.Debug.Log("Spirits have been activated");
-            //get the spirts and then activate them
+
         }
 
         public void ActivateNewSpirit()
@@ -57,17 +68,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
             {
                 UnityEngine.Debug.Log(spirit.transform.GetChild(0).name);
                 UnityEngine.Debug.Log("Child spirit name above.");
-                spirit.transform.GetChild(0).gameObject.SetActive(false);
-            }
-
-        }
-
-        void Start()
-        {
- 
-            if (PomoTimer.Exists) {
-                PomoTimer.Instance.SessionStarted.AddListener(OnSessionStarted);
-                PomoTimer.Instance.SessionEnded.AddListener(OnSessionEnded);
+                spirit.SetSpiriteActiveTo(false);
             }
 
         }
@@ -119,13 +120,37 @@ namespace LeftOut.GameJam.NonPlayerCharacters
             }
             
         }
+        void activateFirstSpirit()
+        {
 
+                UnityEngine.Debug.Log("Spawning tutorial spirit.");
 
+                List<Spirit> m_spirits = new List<Spirit>();
 
+                //add all spirits who aren't in the scene to that list
+                foreach (Spirit spirit in spirits)
+                {
+                    if (!spirit.isInScene && spirit.name != "Spirit_QuestionMark")
+                    {
+                        m_spirits.Add(spirit);
+                    }
+                }
+                UnityEngine.Debug.Log(m_spirits.ToString());
+                //if there's at least one spirit on that list, pick one at random and then add then flag it as in scene
+                if (m_spirits.Count > 0)
+                {
+                    int spiritIndex = UnityEngine.Random.Range(0, m_spirits.Count);
+                    m_spirits[spiritIndex].isInScene = true;
+                    m_spirits[spiritIndex].spiritHasSpoken = false;
+                    m_spirits[spiritIndex].spiritIsTutorial = true;
+            }
+            
+        }
         // Update is called once per frame
         void Update()
         {
         
         }
+
     }
 }

@@ -3,8 +3,14 @@ VAR currentStoryKnot = "Greet"
 Whoa! This is clearly the place to be. 
 I'm not going anywhere! Come find me when the sun sets again.
 ~ currentStoryKnot = "Tip1"
-->DONE
 
+VAR isTutorial = "False"
+INCLUDE UniversalTutorial.Ink
+{ isTutorial == "True":
+~ isTutorial = "False"
+->Tutorial->
+}
+->DONE
 
 ===About1===
 ->Greeting5->
@@ -126,23 +132,59 @@ But there's lots of stuff in life like that - you just have to trust yourself an
 
 We're not supposed to talk too much about being a spirit.
 But in my mind seeing what you would ask us about is actually learning more about humans! 
-So what would you want to know?
+->Spirit_Questions
+=Spirit_Questions
+{!So what would you want to know?|What else?|Anything else?}
+    *[Where do spirits live?]
+        Everywhere! ->Spirit_Questions
+    *[What do spirits do?]
+        Anything we want to do! ->Spirit_Questions
+    *[How long do spirits live?]
+        As long as we like! ->Spirit_Questions
+    *->
+    -Good talk! Thanks for that!
 ~ currentStoryKnot = "Encourage3"
 ->DONE
 
 
 ===Convo2===
 ->Greeting12->
-
 I never do anything I don't want to do. Do you?
-~ currentStoryKnot = "About4"
+    *[Of course!]
+        Ugh. Why? I mean, I've heard that if humans don't do certain things their bodies waste away.
+        That sounds awful! Could you imagine eating every day!?
+        **[I like eating.]
+            Well. That's good! Because I guess you will be doing it every day.
+        **[Ugh, right?!]
+            Right! No eating for us. Disgusting habit.
+        **[I can't imagine!]
+            I tried it once. Was deeply unpleasant. Food is always icky or crumbly or sticky.
+        --Glad we talked this out, Tree Human.
+    *[I have to work.]
+        Right! Working! So you can get money!
+        Spirits don't really have needs the way you do. 
+        I hear being human is amazing because your bodies experience all kinds of stuff.
+        Sounds exhausting to me. Giving your time to someone else just to live? no way.
+    *[Me neither!]
+        Yes! Finally, a human who understands!
+        That's also good to hear because that means you WANT to be here helping the tree grow. You're a good person!
+    - ~ currentStoryKnot = "About4"
 ->DONE
 
 
 ===Convo3===
 ->Greeting16->
-
+While you were working I visited every spirit within a mile of here. It was exhausting.
 I never want to miss out on anything, so I tend to say yes to everything.
+    *[Me too!]
+        I would say we should work on that, but honestly I don't want to.
+        Like, doing things is so fun and not doing things is boring. Do it all!
+    *[You should say no sometimes!]
+        Yeah! I'm going to start saying no to things!
+        ...but what if I say no and miss out on something awesome?
+        ...that would be horrible.
+    -Hah! I say, "NO!" to saying, "No!" Now I have the power of denying something but all the fun of doing things.
+    Thank you!
 ->DONE
 
 
