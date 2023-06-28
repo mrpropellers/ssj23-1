@@ -32,11 +32,16 @@ namespace LeftOut.GameJam.Clock
         public UnityEvent<SessionType> SessionStarted { get; private set; }
         [field: SerializeField]
         public UnityEvent<SessionType> SessionEnded { get; private set; }
+        // Event specifically for when a user plays/pauses when not at a session boundary
+        // true => Playing, false => Paused
+        [field: SerializeField]
+        public UnityEvent<bool> UserPlayPause { get; private set; }
 
         // Returns a value in range [0-1] indicating how far through the current session we are
         public static float ProgressThroughSession => Instance.GetProgressThroughSession();
         public static SessionType currentSessionType => Instance.GetCurrentSession();
-      
+
+        public static float TimerTimeScale => Instance.m_TimerTimeScale;
         public static bool Exists => Instance != null;
         public static bool IsPlaying => Exists && Instance.m_IsPlaying;
         public static float CurrentTime => Instance.m_CurrentSessionLength - Instance.m_TimeInSession;
@@ -53,6 +58,7 @@ namespace LeftOut.GameJam.Clock
             {
                 Play();
             }
+            Instance.UserPlayPause?.Invoke(Instance.m_IsPlaying);
         }
 
         public static void FastForward() => Instance.FastForward_impl();
@@ -61,7 +67,7 @@ namespace LeftOut.GameJam.Clock
         {
             // TODO: Eventually this should be initialized by something else via a public method
             Initialize_impl(DefaultSettings);
-
+            //set up listener for triggering spirits
         }
 
         void Update()

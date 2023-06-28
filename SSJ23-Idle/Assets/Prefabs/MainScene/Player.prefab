@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7130337006525946369}
   - component: {fileID: 3805939502818007199}
   - component: {fileID: 1674115441006323112}
+  - component: {fileID: 348127423359979202}
   - component: {fileID: 4390742449223812254}
   - component: {fileID: 1498659121377062944}
   - component: {fileID: 4229981556289642648}
@@ -122,6 +123,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d01d9c596e44d6698aef4811e0fab81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mask:
+    serializedVersion: 2
+    m_Bits: 192
+  MaxDistance: 1000
+  <RaycastHitEvent>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &348127423359979202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2270947654428232932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e512cdce6ce8d4288bc2b3da61e12d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SphereRadius: 0.005
   Mask:
     serializedVersion: 2
     m_Bits: 192
@@ -528,7 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CursorDefault: {fileID: 2800000, guid: 91107b5d5ef8e6440be594489a686d14, type: 3}
   CursorPrune: {fileID: 2800000, guid: 0133fc1faceb45c4a8c0c3ec9fdaca87, type: 3}
-  m_Raycaster: {fileID: 1674115441006323112}
+  m_SphereCaster: {fileID: 0}
   <PruneBranch>k__BackingField:
     m_PersistentCalls:
       m_Calls:

@@ -1,4 +1,5 @@
 using System;
+using System.Timers;
 using LeftOut.GameJam.Clock;
 using LeftOut.GameJam.PlayerInteractions;
 using UnityEngine;
@@ -14,6 +15,8 @@ namespace LeftOut.GameJam.UserInterface
         // Active: 1
         [SerializeField]
         Sprite[] buttonSprites;
+        [SerializeField]
+        Button Button;
         [SerializeField]
         InteractionExecutor Interactions;
         
@@ -33,6 +36,38 @@ namespace LeftOut.GameJam.UserInterface
                 Debug.LogWarning($"No reference to {nameof(InteractionExecutor)} set - disabling self.");
                 enabled = false;
             }
+
+            if (PomoTimer.Exists)
+            {
+                PomoTimer.Instance.SessionStarted.AddListener(OnSessionStarted);
+                PomoTimer.Instance.SessionEnded.AddListener(OnSessionEnded);
+                PomoTimer.Instance.UserPlayPause.AddListener(OnPlayPause);
+            }
+        }
+
+        void OnPlayPause(bool isPlaying)
+        {
+            if (isPlaying)
+            {
+                OnSessionStarted(PomoTimer.currentSessionType);
+            }
+            else
+            {
+                Button.interactable = false;
+            }
+        }
+
+        void OnSessionStarted(SessionType sessionStarted)
+        {
+            if (sessionStarted is SessionType.LongBreak or SessionType.ShortBreak)
+            {
+                Button.interactable = true;
+            }
+        }
+
+        void OnSessionEnded(SessionType sessionEnded)
+        {
+            Button.interactable = false;
         }
 
         void Update()

@@ -1,7 +1,7 @@
 ﻿using System;
 using LeftOut.GameJam.Bonsai;
 using LeftOut.JamAids;
-using UnityEditor;
+using LeftOut.GameJam.Clock;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -20,27 +20,69 @@ namespace LeftOut.GameJam.PlayerInteractions
         Texture2D CursorPrune;
 
         [SerializeField]
-        CursorRaycaster m_Raycaster;
-
+        SphereCaster m_SphereCaster;
 
         [field: SerializeField]
         public UnityEvent PruneBranch { get; private set; }
 
         public bool IsInPruneMode => Mode == InteractionMode.Prune;
 
+        public bool IsPruningAllowed => PomoTimer.Exists
+            ? PomoTimer.IsPlaying && PomoTimer.currentSessionType != SessionType.Focus
+            // If no PomoTimer, just assume we're testing and allow pruning
+            : true;
+
         public void TogglePruneMode()
         {
             ChangeMode(Mode == InteractionMode.Prune ? InteractionMode.Select : InteractionMode.Prune);
         }
         
-        void OnEnable()
+        void Start()
         {
-            m_Raycaster.RaycastHitEvent.AddListener(OnRaycastHit);
+            m_SphereCaster.RaycastHitEvent.AddListener(OnRaycastHit);
+            if (PomoTimer.Exists)
+            {
+                PomoTimer.Instance.SessionStarted.AddListener(OnSessionStarted);
+                PomoTimer.Instance.SessionEnded.AddListener(OnSessionEnded);
+                PomoTimer.Instance.UserPlayPause.AddListener(OnPlayPause);
+            }
+            else
+            {
+                Debug.LogWarning("No PomoTimer to monitor");
+            }
         }
         
         void OnDisable()
         {
-            m_Raycaster.RaycastHitEvent.RemoveListener(OnRaycastHit);
+            m_SphereCaster.RaycastHitEvent.RemoveListener(OnRaycastHit);
+            if (PomoTimer.Exists)
+            {
+                PomoTimer.Instance.SessionStarted.RemoveListener(OnSessionStarted);
+                PomoTimer.Instance.SessionEnded.RemoveListener(OnSessionEnded);
+                PomoTimer.Instance.UserPlayPause.RemoveListener(OnPlayPause);
+            }
+        }
+
+        void OnPlayPause(bool isPlaying)
+        {
+            if (isPlaying)
+            {
+                OnSessionStarted(PomoTimer.currentSessionType);
+            }
+            else
+            {
+                ChangeMode(InteractionMode.Select);
+            }
+        }
+
+        void OnSessionStarted(SessionType sessionStarted)
+        {
+            ChangeMode(InteractionMode.Select);
+        }
+
+        void OnSessionEnded(SessionType sessionEnded)
+        {
+            ChangeMode(InteractionMode.Select);
         }
 
         void ChangeMode(InteractionMode newMode)
@@ -94,7 +136,7 @@ namespace LeftOut.GameJam.PlayerInteractions
             switch (Mode)
             {
                 case (InteractionMode.Prune):
-                    if (m_Raycaster.TryRaycast(out var hit) &&
+                    if (m_SphereCaster.TryCast(out var hit) &&
                         TryGetPruneTarget(hit.collider.gameObject, out var limb))
                     {
                         Debug.Log($"Pruning {limb.name}");
