@@ -36,7 +36,7 @@ namespace LeftOut.GameJam.Clock
         // Returns a value in range [0-1] indicating how far through the current session we are
         public static float ProgressThroughSession => Instance.GetProgressThroughSession();
         public static SessionType currentSessionType => Instance.GetCurrentSession();
-        
+      
         public static bool Exists => Instance != null;
         public static bool IsPlaying => Exists && Instance.m_IsPlaying;
         public static float CurrentTime => Instance.m_CurrentSessionLength - Instance.m_TimeInSession;
@@ -61,7 +61,7 @@ namespace LeftOut.GameJam.Clock
         {
             // TODO: Eventually this should be initialized by something else via a public method
             Initialize_impl(DefaultSettings);
-            //set up listener for triggering spirits
+
         }
 
         void Update()

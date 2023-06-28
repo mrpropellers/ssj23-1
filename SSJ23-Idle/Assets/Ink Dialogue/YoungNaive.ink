@@ -1,10 +1,16 @@
 VAR currentStoryKnot = "Greet"
-
+VAR writingThingsDown = "False"
 Is this your tree?? I didn't know humans cared for us spirits. 
 I hope you don't mind, but I'll be here every sunset for now.
 ~ currentStoryKnot = "Tip1"
-->DONE
 
+VAR isTutorial = "False"
+INCLUDE UniversalTutorial.Ink
+{ isTutorial == "True":
+~ isTutorial = "False"
+->Tutorial->
+}
+->DONE
 
 ===About1===
 ->Greeting5->
@@ -76,9 +82,11 @@ Oh golly! This is incredible! You're doing an incredible job.
 Honestly...
 I think the biggest challenge sometimes is just showing up.
 You're here! You showed up for us! And for yourself! You already beat the biggest challenge!
+{writingThingsDown == "True":
+    Also I tried some of the planning stuff we discussed and it really helped! Thank you!"
+    }
 ~ currentStoryKnot = "About2"
 ->DONE
-
 
 ===Encourage4===
 ->Greeting11->
@@ -133,29 +141,93 @@ I guess mistakes can also be fun.
 ===Convo1===
 ->Greeting7->
 
-I tend to dive into tasks too hard and fast and I don't pace myself.
-So I get things done but I'm always so tired.
-What would you recommend?
-
-~ currentStoryKnot = "Encourage3"
+When I have things I need to get done, I tend to dive in too fast and then I get overwhelmed. 
+    *[What does a spirit need to do?]
+        Oh! Well we commune with other spirits. We admire the sky and the trees and the world. We meditate on the meaning of things. We act as guardians for fundamental aspects of the universe. We have a lot of responsibilities.
+            Nothing as serious as your responsibilities, but everyone is fighting their own battle!
+    *[Make a plan to pace yourself!]
+        -> Solutions
+    *[I do the same thing.]
+        We have something in common!! I like that.
+        At least we know we're doing it. We just need to find a better way to do things.
+    ~ currentStoryKnot = "Encourage3"
+    -Thanks for talking to me about it!
+    ->DONE
+=Solutions
+    A plan sounds smart! What's a plan?
+        *[You write things down.]
+        *[You decide what to do before you do it.]
+        -Ohhhh! That would help. Then I wouldn't have to worry so much about remembering what I need to do before I do it.
+        I'll give that at try!
+        ~currentStoryKnot = "Encourage3"
+        ~writingThingsDown = "True"
 ->DONE
 
 
 ===Convo2===
 ->Greeting12->
-
-Reading
+Do you like to read?
+    *[Yes, every day!]
+        Every day?! That's INCREDIBLE. I didn't know you could do that! What do you like to read?
+            ** [True stories.]
+                How many true stories could there be?! If you read them every day, then there must be so many!
+            ** [Made up stories.]
+                Things that are made up?! How many stories can humans possibly mkae up?!
+                I guess if you read every day, there must be so many!
+            ** [Everything.]
+                That makes sense! If you like to read every day, then you would need a lot of options!
+    *Sometimes[.]<>
+        ? Oh! Is something keeping you from reading?
+        **[I only like certain things.]
+            It's good to know what you like! I still read things I hate all the time because I'm trying to figure out what I do and don't like.
+            Yesterday I read all of the stop signs in the city. Ugh. So boring. I have to be careful to never do that again.
+        **[I'm often too busy to read.]
+            That's not a bad thing! It means the times when you do get to read are extra special! If you had to read all the time...
+        **[I normally read for work.]
+        -- Isn't it so strange how something we love maybe loses its appeal when we're required to do it?
+            That's why I keep at least one or two things in my life that I hate doing.
+            If my life was only things I loved, then maybe I'd start hating those things on accident!
+    *[It's not for me.]
+        That's okay! Not everything has to be everybody. I love to read, but I bet there's other things we have in common. Do you like kites? Or puppies? Or food?
+            **[I love kites!]
+                Oh, wow! That is brave of you. Kites remind of demons from the spirit realm, so I find them spooky. How we're different is so interesting!
+            **[I love puppies!]
+                Same here! Puppies are the best. Kittens are pretty great, too. Maybe it's kind of a lazy attempt at common ground because everyone likes puppies.
+                But it's still nice to find something in common, even if it's obvious.
+            **[I love food!]
+                Me too! I can't eat food, but I love everything else about it! Lots of people like food but they don't love it!
+            - - Everyone is so different yet so similar. That's what makes life interesting.
+    - Even a conversation about reading can be almost as fun as reading! Thanks for talking to me!
 ~ currentStoryKnot = "About4"
 ->DONE
 
 
 ===Convo3===
 ->Greeting16->
-
-What do you want to do with your life?
+Have you figured out what you want to do with your life?
+    *[That's a very serious question.]
+        Is it? Spirits live for exactly as long as we want to, so I guess we have as much life as we want to figure out what we want to do with it.
+        Sorry if that was too personal! 
+            ** [It's okay!]
+                Whew! I'm glad to hear it.
+            ** [Let's talk about something else.]
+                Okay! Uhm. Oh! I'll think about it and get back to you!
+            -- Until next time!
+    *[I think I have.]
+        Wow! That must feel amazing! Good for you! Spirits live as long as we like, so some of us never really decide because we never have to. I envy you.
+        I'll keep watching you work and see what I can learn!
+    *[I'm still working on it.]
+        Me too! How are you deciding what to do?
+            **[Trying new things.]
+                Experimenting is smart! The more things we try the more we'll know what we do and don't like. I'll try more things!
+            **[Talking to others about it.]
+                Same! Talking to other spirits helps me sort out at my thoughts. Sometimes it's easy to think you have to figure it out alone.
+            **[Learning from others.]
+                Oh! Like in school? Or in training? Spirits don't really have a school but sometimes we go to human schools.
+                Well. We don't attend as students. We just watch others!
+            -- Good luck with doing things with your life! I have a good feeling you'll do it right. Whatever that means for you.
+    - ->DONE
 ->DONE
-
-
 
 ===Greeting1===
 Hiya! Thanks again for letting me stay.

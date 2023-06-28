@@ -1,3 +1,4 @@
+using LeftOut.GameJam.Clock;
 using LeftOut.GameJam.Dialogue;
 using System;
 using UnityEngine;
@@ -25,6 +26,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
         public string currentStoryKnot;
 
         [SerializeField] public bool spiritHasSpoken;
+        [SerializeField] public bool spiritIsTutorial;
 
         // Start is called before the first frame update
         void Awake()
@@ -35,6 +37,27 @@ namespace LeftOut.GameJam.NonPlayerCharacters
             dialogue_indicator.SetActive(false);
             spiritHasSpoken = true;
             currentStoryKnot = "Greet";
+            spiritIsTutorial = false;
+        }
+
+        public void SetSpiriteActiveTo(bool status)
+        {
+            gameObject.SetActive(status);
+        }
+
+        public void SetSpriteActiveTo(bool status)
+        {
+            gameObject.transform.Find("Sprite").gameObject.SetActive(status);
+
+        }
+
+        public void SetSpiritHasSpokenTo(bool status)
+        {
+            spiritHasSpoken = status;
+        }
+        public void SetSpiritInSceneTo(bool status)
+        {
+            isInScene = status;
         }
 
         private void Update()
@@ -50,6 +73,7 @@ namespace LeftOut.GameJam.NonPlayerCharacters
         void OnMouseUp()
         {
             SpiritVocalized?.Invoke(SpiritVoiceType);
+
             if (!SpiritDialogueManager.GetInstance().dialogueIsPlaying && spiritHasSpoken == false)
             {
                 //if currentStoryKnot is THE_END then don't let the player continue the story.
