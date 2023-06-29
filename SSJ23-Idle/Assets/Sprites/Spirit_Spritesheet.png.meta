@@ -1,0 +1,985 @@
+fileFormatVersion: 2
+guid: efd37a202afb9e94888ebe4ea43f90fc
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 3515
+        width: 541
+        height: 604
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73b5da3fb7ccae4d9966cd04706697b
+      internalID: -31930160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 3522
+        width: 438
+        height: 419
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8372a4d64ec58774d8b0ccd52e4e53cb
+      internalID: 360715759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 3514
+        width: 439
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65a32a9fd21b9749bd0ab7f86282293
+      internalID: -976528780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 3520
+        width: 458
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8b6b1eb8eeb8c4a95169a05f2eafc9
+      internalID: -53878197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 3520
+        width: 583
+        height: 336
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af36ee41332cd894c8ff8b2428836d72
+      internalID: -1407437937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3043
+        y: 3521
+        width: 281
+        height: 489
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57f2b47a195b2a44bf91db588bdc080
+      internalID: 1213423609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 3553
+        y: 3516
+        width: 263
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3876031f721af844bd37271106c0ecd
+      internalID: 400638921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 2791
+        width: 149
+        height: 612
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ac1508ead8a9d4491340e16163fd66
+      internalID: 428400738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 2765
+        width: 253
+        height: 662
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6b2e340d2902645904071e2caf9e3f
+      internalID: 747393259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 2805
+        width: 129
+        height: 624
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982e49fe84a52124b8458bed45f2d42e
+      internalID: -1893009730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1859
+        y: 2966
+        width: 263
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433a0d9439ee47b4a88d7bfb1f9d79e1
+      internalID: 1683733692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 2969
+        width: 333
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f15661e82cff846bac190bbea4c81b
+      internalID: 2062956225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 3056
+        y: 2954
+        width: 262
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a668c874fbdc1488f1c07127992d16
+      internalID: -460577996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 3468
+        y: 2962
+        width: 421
+        height: 435
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066cf8ccd1b004c418cae3f9551a0294
+      internalID: -1003689299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 2157
+        width: 142
+        height: 575
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760ba7b540f32de479d83c3a759d9338
+      internalID: -2028087805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 2165
+        width: 266
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77620014a1202ee41b6cb0226716b6d0
+      internalID: 2085720074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 2315
+        width: 344
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f676f222354ba418a9a6324b4752fe
+      internalID: 549579916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 2999
+        y: 2258
+        width: 364
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a317314b84bf95f43be5ae721e3c9338
+      internalID: -310544980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 1766
+        width: 132
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d8503ea76b5684fab98dc5da3c3fa0
+      internalID: -525017004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 1755
+        width: 312
+        height: 323
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6269198c3ae967442a8e8bc5ad41abe5
+      internalID: 893835029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1337
+        width: 213
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39810d1aa4a45e74faef9c47b6283b6e
+      internalID: -2036751275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1156
+        width: 161
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea2ad112c5f2d1429a213dab5409079
+      internalID: 1183589416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 906
+        width: 321
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fbb897daf80f642b92f279dfde78c9
+      internalID: 1332424036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 680
+        width: 255
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd0c826b5ea13c42bfe4fdadd4319e2
+      internalID: -1499643641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 450
+        width: 188
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b8182c5b06f32459f7055e241207ad
+      internalID: -1821992143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 41
+        width: 151
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e17613007bb0048aece95895f09f2f
+      internalID: 1360618155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 2056
+        y: 1397
+        width: 173
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf1ab82ab75d5a41b46edc5d869efc4
+      internalID: -1100466051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 1200
+        width: 139
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0abea2ffb2a17634191d3f5906ea63bf
+      internalID: -273098138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 912
+        width: 326
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd13249250423c74bab784e566f381d3
+      internalID: -1124502505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 681
+        width: 160
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd5c90a84973a7409d4a36561ac4d47
+      internalID: 2052811485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 454
+        width: 202
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1288390ff0d4b294e9b9179ac79bb2bd
+      internalID: 1822332328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 91
+        width: 156
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6c85fc1ed44354e96e4aa5b7ee6489
+      internalID: -1504917520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 1376
+        width: 205
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970c9ccc4e39a4547aa9548e950d8e97
+      internalID: -1630653893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 3518
+        y: 1173
+        width: 104
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80845e50c8ba1504f8510fd2c8ed61b8
+      internalID: 1306150995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 3012
+        y: 961
+        width: 272
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3da5733afec56e499c100040821e5e5
+      internalID: -1461195971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 3015
+        y: 725
+        width: 184
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9f226ebdc93a74094a5b451b7783d2
+      internalID: -216354083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 3068
+        y: 468
+        width: 146
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1338b5ee4f279be44a9b519a9e95e928
+      internalID: -1630537612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spirit_Spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 2998
+        y: 198
+        width: 347
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56913e2549db7a945a869b20bcd650c8
+      internalID: 1417637455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5096e8f38b4ff154ba9ec29dc60b0a78
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Spirit_Spritesheet_0: -31930160
+      Spirit_Spritesheet_1: 360715759
+      Spirit_Spritesheet_10: 1683733692
+      Spirit_Spritesheet_11: 2062956225
+      Spirit_Spritesheet_12: -460577996
+      Spirit_Spritesheet_13: -1003689299
+      Spirit_Spritesheet_14: -2028087805
+      Spirit_Spritesheet_15: 2085720074
+      Spirit_Spritesheet_16: 549579916
+      Spirit_Spritesheet_17: -1208321601
+      Spirit_Spritesheet_18: -310544980
+      Spirit_Spritesheet_19: -903763508
+      Spirit_Spritesheet_2: -976528780
+      Spirit_Spritesheet_20: -525017004
+      Spirit_Spritesheet_21: -1835529716
+      Spirit_Spritesheet_22: 893835029
+      Spirit_Spritesheet_23: -6242877
+      Spirit_Spritesheet_24: -2036751275
+      Spirit_Spritesheet_25: -927400120
+      Spirit_Spritesheet_26: 1183589416
+      Spirit_Spritesheet_27: -1996103167
+      Spirit_Spritesheet_28: 1332424036
+      Spirit_Spritesheet_29: 521764639
+      Spirit_Spritesheet_3: -53878197
+      Spirit_Spritesheet_30: -1499643641
+      Spirit_Spritesheet_31: -1755872594
+      Spirit_Spritesheet_32: -1821992143
+      Spirit_Spritesheet_33: -320971345
+      Spirit_Spritesheet_34: 1360618155
+      Spirit_Spritesheet_35: -1880684074
+      Spirit_Spritesheet_36: -1100466051
+      Spirit_Spritesheet_37: -2080456835
+      Spirit_Spritesheet_38: -273098138
+      Spirit_Spritesheet_39: 1026225009
+      Spirit_Spritesheet_4: -1407437937
+      Spirit_Spritesheet_40: -1124502505
+      Spirit_Spritesheet_41: 220485047
+      Spirit_Spritesheet_42: 2052811485
+      Spirit_Spritesheet_43: -252569572
+      Spirit_Spritesheet_44: 1822332328
+      Spirit_Spritesheet_45: 516699198
+      Spirit_Spritesheet_46: -1504917520
+      Spirit_Spritesheet_47: 477420960
+      Spirit_Spritesheet_48: -1630653893
+      Spirit_Spritesheet_49: -1118766706
+      Spirit_Spritesheet_5: 1213423609
+      Spirit_Spritesheet_50: 1306150995
+      Spirit_Spritesheet_51: 1446370765
+      Spirit_Spritesheet_52: -1461195971
+      Spirit_Spritesheet_53: 1767674351
+      Spirit_Spritesheet_54: -216354083
+      Spirit_Spritesheet_55: -812954312
+      Spirit_Spritesheet_56: -1630537612
+      Spirit_Spritesheet_57: -992841384
+      Spirit_Spritesheet_58: 1417637455
+      Spirit_Spritesheet_59: -1731140693
+      Spirit_Spritesheet_6: 400638921
+      Spirit_Spritesheet_7: 428400738
+      Spirit_Spritesheet_8: 747393259
+      Spirit_Spritesheet_9: -1893009730
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
